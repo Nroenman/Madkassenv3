@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Playwright",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/nikol/RiderProjects/Madkassen/madkassenweb",
     "node.js.detected.package.eslint": "true",
@@ -69,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737108606409</updated>
       <workItem from="1737108607921" duration="6939000" />
-      <workItem from="1764149905605" duration="2650000" />
+      <workItem from="1764149905605" duration="8753000" />
     </task>
     <servers />
   </component>
