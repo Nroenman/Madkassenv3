@@ -36,7 +36,6 @@ namespace UnitTest
             {
                 ProductName = "Test Product",
                 Price = 100,
-                ComputedImageUrl = "https://i.imghippo.com/files/KCsO2582jBE.png"
             };
 
             var cartItem = new CartItem
