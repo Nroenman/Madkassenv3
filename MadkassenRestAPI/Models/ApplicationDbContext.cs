@@ -87,13 +87,13 @@ namespace MadkassenRestAPI.Models
             modelBuilder.Entity<Users>()
                 .Property(u => u.CreatedAt)
                 .HasColumnName("CreatedAt")
-                .HasColumnType("datetime2")
+                .HasColumnType("datetime")  // Changed from datetime2 to match database
                 .IsRequired(true);
 
             modelBuilder.Entity<Users>()
                 .Property(u => u.UpdatedAt)
                 .HasColumnName("UpdatedAt")
-                .HasColumnType("datetime2")
+                .HasColumnType("datetime")  // Changed from datetime2 to match database
                 .IsRequired(true);
 
             modelBuilder.Entity<Users>()
@@ -126,6 +126,18 @@ namespace MadkassenRestAPI.Models
                 .IsRequired();
 
             modelBuilder.Entity<CartItem>()
+                .Property(c => c.AddedAt)
+                .HasColumnName("AddedAt")
+                .HasColumnType("datetime")  // Configure as datetime to match database
+                .IsRequired();
+
+            modelBuilder.Entity<CartItem>()
+                .Property(c => c.ExpirationTime)
+                .HasColumnName("ExpirationTime")
+                .HasColumnType("datetime")  // Configure as datetime to match database
+                .IsRequired();
+
+            modelBuilder.Entity<CartItem>()
                 .HasOne(c => c.Produkter)
                 .WithMany()
                 .HasForeignKey(c => c.ProductId);
@@ -152,7 +164,7 @@ namespace MadkassenRestAPI.Models
             modelBuilder.Entity<Order>()
                 .Property(o => o.OrderDate)
                 .HasColumnName("OrderDate")
-                .HasColumnType("datetime2")
+                .HasColumnType("datetime")  // Changed from datetime2 to match database
                 .HasDefaultValueSql("GETDATE()")
                 .IsRequired();
 

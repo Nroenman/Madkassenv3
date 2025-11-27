@@ -1,8 +1,8 @@
-﻿using MadkassenRestAPI.Models;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Linq;
 
 namespace IntegrationTest
 {
@@ -10,22 +10,20 @@ namespace IntegrationTest
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Testing");
+            
             builder.ConfigureServices(services =>
             {
-                var descriptor =
-                    services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<ApplicationDbContext>));
-
-                if (descriptor != null)
+                // Remove background services only (they hang tests)
+                var hostedServices = services.Where(d => 
+                    d.ServiceType == typeof(IHostedService)).ToList();
+                foreach (var service in hostedServices)
                 {
-                    services.Remove(descriptor);
+                    services.Remove(service);
                 }
-
-                services.AddDbContext<ApplicationDbContext>(options =>
-                {
-                    options.UseInMemoryDatabase("TestDatabase");
-                });
+                
+                // Keep SQL Server - use real database for integration tests
             });
         }
     }
-}kjhkjhgdfgdfghdfgdgdfg
-fsdfsfdsdfsdf
+}
