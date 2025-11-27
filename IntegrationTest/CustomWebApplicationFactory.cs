@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace IntegrationTest
 {
-    public class CustomWebApplicationFactory<Program>
+    public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
