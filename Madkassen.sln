@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadkassenRestAPI", "Madkass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestOrder", "UnitTestOrder\UnitTestOrder.csproj", "{C0297BDB-54FC-47EA-B6DC-456AA7C37FEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTest", "IntegrationTest\IntegrationTest.csproj", "{AF7E8490-D098-42D1-A4BD-8ECA39194C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{C0297BDB-54FC-47EA-B6DC-456AA7C37FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0297BDB-54FC-47EA-B6DC-456AA7C37FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0297BDB-54FC-47EA-B6DC-456AA7C37FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7E8490-D098-42D1-A4BD-8ECA39194C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7E8490-D098-42D1-A4BD-8ECA39194C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7E8490-D098-42D1-A4BD-8ECA39194C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7E8490-D098-42D1-A4BD-8ECA39194C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
