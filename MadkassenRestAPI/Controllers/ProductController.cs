@@ -104,5 +104,33 @@ namespace MadkassenRestAPI.Controllers
             // Return the products list with pagination details if necessary
             return Ok(products);
         }
+
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> DeleteProduct(int Id)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            //var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+            //var message = "Only admin have permission to delete products";
+
+            if (string.IsNullOrEmpty(userId))
+            { 
+                return Unauthorized(new { message = "Invalid or missing user ID in token" });
+            }
+
+            /*if (userRole != "Admin")
+            {
+                return Forbid(message);
+            }
+            */
+            var product = await context.Produkter.FindAsync(Id);
+            if (product == null)
+            {
+                return NotFound(new { message = "Product not found" });
+            }
+            context.Produkter.Remove(product);
+            await context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }
