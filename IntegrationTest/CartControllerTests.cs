@@ -135,7 +135,7 @@ namespace IntegrationTest
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             
             var cartItems = await response.Content.ReadFromJsonAsync<List<CartItemDto>>();
-            
+
             Assert.NotNull(cartItems);
             Assert.Single(cartItems);
             Assert.Equal(productId, cartItems[0].ProductId);
