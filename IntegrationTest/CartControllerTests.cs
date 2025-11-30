@@ -9,12 +9,12 @@ using Xunit;
 
 namespace IntegrationTest
 {
-    public class CartControllerIntegrationTests : IClassFixture<CustomWebApplicationFactory>
+    public class CartControllerTests : IClassFixture<CustomWebApplicationFactory>
     {
         private readonly HttpClient _client;
         private readonly CustomWebApplicationFactory _factory;
 
-        public CartControllerIntegrationTests(CustomWebApplicationFactory factory)
+        public CartControllerTests(CustomWebApplicationFactory factory)
         {
             _factory = factory;
             _client = factory.CreateClient();
