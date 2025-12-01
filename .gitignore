@@ -11,3 +11,12 @@ riderModule.iml
 /UnitTestOrder
 /UnitTestOrder
 /madkassenweb/.idea
+# Visual Studio / test cache
+.vs/
+TestResults/
+*.user
+*.suo
+*.testlog
+*.db
+*.db-wal
+*.db-shm
