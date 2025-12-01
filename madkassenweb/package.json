@@ -30,20 +30,26 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "playwright:test": "playwright test",
+    "playwright:ui": "playwright test --ui --ui-host=127.0.0.1"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ],
+    "rules": {
+      "testing-library/prefer-screen-queries": "off"
+    },
     "overrides": [
       {
-        "files": [
-          "Test/**/*.{js,jsx,ts,tsx}"
-        ],
+        "files": ["test/**/*.{js,jsx}"],
         "rules": {
-          "testing-library/prefer-screen-queries": "off"
+          "testing-library/no-node-access": "off",
+          "testing-library/no-container": "off",
+          "testing-library/render-result-naming-convention": "off"
         }
       }
     ]
