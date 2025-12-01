@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="" />
+    <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Nroenman"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Nroenman/Madkassenv2.git",
+    "accountId": "da050009-ae6a-4cc3-bc6a-c96f2518c01f"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -70,6 +84,7 @@
       <workItem from="1737108607921" duration="6939000" />
       <workItem from="1764149905605" duration="9238000" />
       <workItem from="1764603342341" duration="41000" />
+      <workItem from="1764606598159" duration="367000" />
     </task>
     <servers />
   </component>

@@ -39,7 +39,9 @@
     ],
     "overrides": [
       {
-        "files": ["Test/**/*.{js,jsx,ts,tsx}"],
+        "files": [
+          "Test/**/*.{js,jsx,ts,tsx}"
+        ],
         "rules": {
           "testing-library/prefer-screen-queries": "off"
         }
