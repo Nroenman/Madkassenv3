@@ -80,18 +80,19 @@ namespace MadkassenTest.Integration
 
             var response = await _client.PostAsJsonAsync("/api/Category", newCategory);
 
-            // 1. We still expect 201 Created
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
 
-            // 2. Instead of relying on the response body (which is null),
-            //    we verify that the category was actually saved correctly in the DB.
-            var dbCategories = context.Kategori.ToList();
-            Assert.Single(dbCategories);
+            var createdCategory = await response.Content.ReadFromJsonAsync<Kategori>();
+            Assert.NotNull(createdCategory);
+            Assert.Equal("New Category", createdCategory.CategoryName);
+            Assert.Equal("New Description", createdCategory.Description);
+            Assert.True(createdCategory.CategoryId > 0);
 
-            var dbCategory = dbCategories[0];
+            var verifyContext = GetDbContext();
+            var dbCategory = await verifyContext.Kategori.FindAsync(createdCategory.CategoryId);
+            Assert.NotNull(dbCategory);
             Assert.Equal("New Category", dbCategory.CategoryName);
             Assert.Equal("New Description", dbCategory.Description);
-            Assert.True(dbCategory.CategoryId > 0);
         }
     }
 }
