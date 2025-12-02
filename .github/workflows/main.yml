@@ -15,6 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Install OS dependencies needed by tests (e.g. SQLite)
+      - name: Install backend OS dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sqlite3 libsqlite3-dev
+
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "9.0.x"
@@ -70,6 +76,10 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
+      # Install tools needed only in CI (serve + wait-on)
+      - name: Install global CLI tools
+        run: npm install -g serve wait-on
+
       # Restore backend once so dotnet run is faster
       - name: Restore backend
         working-directory: ./MadkassenRestAPI
@@ -91,7 +101,7 @@ jobs:
           sleep 15
 
       # Build frontend for E2E
-      - name: Build frontend
+      - name: Build frontend (for E2E)
         working-directory: ./madkassenweb
         run: npm run build
 
@@ -99,8 +109,8 @@ jobs:
       - name: Start frontend static server
         working-directory: ./madkassenweb
         run: |
-          npx serve -s build -l 3000 &
-          npx wait-on http://localhost:3000
+          serve -s build -l 3000 &
+          wait-on http://localhost:3000
 
       # Run Playwright tests
       - name: Run Playwright tests
