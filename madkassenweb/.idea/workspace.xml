@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/user-can-sort-by-catogory.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/test-auth-login-user-can-s-3cc6a-ly-log-in-and-is-redirected/trace.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/test-user-can-add-products-232f7-product-to-cart-after-login/trace.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/test-user-can-buy-products-6850a-oduct-through-checkout-flow/trace.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/test-user-can-view-product-e981e--and-load-products-from-API/trace.zip" beforeDir="false" />
-    </list>
+    <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +89,7 @@
       <workItem from="1764606598159" duration="367000" />
       <workItem from="1764612443487" duration="5349000" />
       <workItem from="1764621520563" duration="1860000" />
-      <workItem from="1764630388412" duration="2734000" />
+      <workItem from="1764630388412" duration="3050000" />
     </task>
     <servers />
   </component>
