@@ -93,12 +93,24 @@ jobs:
         working-directory: ./madkassenweb
         run: npx playwright install --with-deps
 
-      # Start backend API (http://localhost:5092)
+      # Start backend API (http://localhost:5092) with DB connection from GitHub secret
       - name: Start backend API
         working-directory: ./MadkassenRestAPI
+        env:
+          ASPNETCORE_ENVIRONMENT: Development
+          ConnectionStrings__DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
         run: |
           dotnet run --urls=http://localhost:5092 --no-build &
-          sleep 15
+          sleep 20
+
+      # Debug: check that login API works in CI
+      # ⚠️ Change /api/Auth/login if your actual login route is different
+      - name: Debug login API request
+        run: |
+          curl -v -X POST http://localhost:5092/api/Auth/login \
+            -H "Content-Type: application/json" \
+            -d '{"email":"Test1@test.com","password":"Test1@test.com"}' \
+            || true
 
       # Build frontend for E2E
       - name: Build frontend (for E2E)
