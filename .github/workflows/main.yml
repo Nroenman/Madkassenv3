@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Install OS dependencies needed by tests (e.g. SQLite)
+      # OS deps (only really needed for SQLite native tools, but harmless)
       - name: Install backend OS dependencies
         run: |
           sudo apt-get update
@@ -25,15 +25,15 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: Restore
+      - name: Restore backend
         working-directory: ./MadkassenRestAPI
         run: dotnet restore
 
-      - name: Build
+      - name: Build backend
         working-directory: ./MadkassenRestAPI
         run: dotnet build --configuration Release --no-restore
 
-      - name: Run tests
+      - name: Run backend tests
         working-directory: ./MadkassenTest
         run: dotnet test --configuration Release --verbosity normal
 
@@ -51,7 +51,7 @@ jobs:
           cache: "npm"
           cache-dependency-path: ./madkassenweb/package-lock.json
 
-      - name: Install dependencies
+      - name: Install frontend dependencies
         working-directory: ./madkassenweb
         run: npm ci
 
@@ -76,35 +76,35 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      # Install tools needed only in CI (serve + wait-on)
+      # CLI tools for serving the built frontend + waiting for it
       - name: Install global CLI tools
         run: npm install -g serve wait-on
 
-      # Restore backend once so dotnet run is faster
+      # Restore backend (for dotnet run)
       - name: Restore backend
         working-directory: ./MadkassenRestAPI
         run: dotnet restore
 
+      # Install frontend deps for Playwright run
       - name: Install frontend dependencies
         working-directory: ./madkassenweb
         run: npm ci
 
+      # Install Playwright browsers on the runner
       - name: Install Playwright browsers
         working-directory: ./madkassenweb
         run: npx playwright install --with-deps
 
-      # ✅ Start backend API with DB connection from GitHub secret
+      # ✅ Start backend API using CI environment (SQLite + CiDatabaseSeeder)
       - name: Start backend API
         working-directory: ./MadkassenRestAPI
         env:
-          ASPNETCORE_ENVIRONMENT: Development
-          ConnectionStrings__DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
+          ASPNETCORE_ENVIRONMENT: CI
         run: |
           dotnet run --urls=http://localhost:5092 --no-build &
           sleep 20
 
-      # ✅ Debug: check that login API works in CI
-      # 🔁 Change /api/Auth/login to your real login endpoint if needed
+      # Optional: debug login API in CI (can keep or remove)
       - name: Debug login API request
         run: |
           curl -v -X POST http://localhost:5092/api/Auth/login \
@@ -112,7 +112,7 @@ jobs:
             -d '{"email":"Test1@test.com","password":"Test1@test.com"}' \
             || true
 
-      # Build frontend for E2E
+      # Build frontend specifically for E2E (uses the same code as in frontend-build)
       - name: Build frontend (for E2E)
         working-directory: ./madkassenweb
         run: npm run build
@@ -124,7 +124,7 @@ jobs:
           serve -s build -l 3000 &
           wait-on http://localhost:3000
 
-      # Run Playwright tests
+      # Run Playwright tests against localhost:3000 + localhost:5092
       - name: Run Playwright tests
         working-directory: ./madkassenweb
         run: npx playwright test
