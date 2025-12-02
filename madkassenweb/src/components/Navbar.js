@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Button, Typography, Menu, MenuItem } from "@mui/material";
-import thumbnailmad from "../images/thumbnailmad.png"; // Madkassen logo
+import { AppBar, Toolbar, Button, Menu, MenuItem } from "@mui/material";
 import useAuth from "../Hooks/useAuth";
-import { useCart } from "../context/CartContext";
-import { Toaster } from "react-hot-toast";
-import userImage from "../assets/user.png"; // Import the user image
+import {useCart} from "../context/CartContext";
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {Toaster} from "react-hot-toast";
+
 
 const Navbar = () => {
     const { isAuthenticated, logout, getUserInfo } = useAuth();
@@ -15,9 +14,6 @@ const Navbar = () => {
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
     const userInfo = getUserInfo();
     const userName = userInfo?.userName;
-    const userEmail = userInfo?.email;
-
-    // Handle opening and closing the dropdown menu
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -26,6 +22,8 @@ const Navbar = () => {
         setAnchorEl(null);
     };
 
+    let userImage;
+    let thumbnailmad;
     return (
         <AppBar position="fixed" className="bg-indigo-600 shadow-md">
             <Toolbar className="flex justify-between items-center px-6 py-3">
