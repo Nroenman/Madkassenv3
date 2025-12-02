@@ -93,7 +93,7 @@ jobs:
         working-directory: ./madkassenweb
         run: npx playwright install --with-deps
 
-      # Start backend API (http://localhost:5092) with DB connection from GitHub secret
+      # ✅ Start backend API with DB connection from GitHub secret
       - name: Start backend API
         working-directory: ./MadkassenRestAPI
         env:
@@ -103,8 +103,8 @@ jobs:
           dotnet run --urls=http://localhost:5092 --no-build &
           sleep 20
 
-      # Debug: check that login API works in CI
-      # ⚠️ Change /api/Auth/login if your actual login route is different
+      # ✅ Debug: check that login API works in CI
+      # 🔁 Change /api/Auth/login to your real login endpoint if needed
       - name: Debug login API request
         run: |
           curl -v -X POST http://localhost:5092/api/Auth/login \
