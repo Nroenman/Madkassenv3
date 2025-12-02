@@ -19,7 +19,6 @@ export const addProduct = async (productData) => {
 
         return response.data;
     } catch (error) {
-        // Extra logging if backend returned a response
         if (error.response) {
             console.error("Error adding product:", error);
             console.error("Response Data:", error.response.data);
@@ -28,7 +27,7 @@ export const addProduct = async (productData) => {
             console.error("Error adding product:", error);
         }
 
-        // Re-throw so callers (and tests) can handle it
+        // Re-throw so caller can handle it
         throw error;
     }
 };

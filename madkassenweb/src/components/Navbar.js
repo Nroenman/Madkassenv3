@@ -1,19 +1,21 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AppBar, Toolbar, Button, Menu, MenuItem } from "@mui/material";
+import thumbnailmad from "../images/thumbnailmad.png";
 import useAuth from "../Hooks/useAuth";
-import {useCart} from "../context/CartContext";
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {Toaster} from "react-hot-toast";
-
+import { useCart } from "../context/CartContext";
+import { Toaster } from "react-hot-toast";
+import userImage from "../assets/user.png";
 
 const Navbar = () => {
     const { isAuthenticated, logout, getUserInfo } = useAuth();
     const { cartItems } = useCart();
-    const [anchorEl, setAnchorEl] = useState(null); // State to control dropdown
+    const [anchorEl, setAnchorEl] = useState(null);
 
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
     const userInfo = getUserInfo();
     const userName = userInfo?.userName;
+
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -22,8 +24,6 @@ const Navbar = () => {
         setAnchorEl(null);
     };
 
-    let userImage;
-    let thumbnailmad;
     return (
         <AppBar position="fixed" className="bg-indigo-600 shadow-md">
             <Toolbar className="flex justify-between items-center px-6 py-3">
@@ -72,8 +72,8 @@ const Navbar = () => {
                         <span className="text-white text-2xl">🛒</span>
                         {totalItems > 0 && (
                             <span className="absolute top-0 right-0 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 rounded-full -mt-1 -mr-1">
-                                {totalItems}
-                            </span>
+                {totalItems}
+              </span>
                         )}
                     </Link>
 
@@ -93,18 +93,19 @@ const Navbar = () => {
                             >
                                 {userName || "User"}
                             </Button>
-                            <Menu
-                                anchorEl={anchorEl}
-                                open={Boolean(anchorEl)}
-                                onClose={handleMenuClose}
-                            >
+                            <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
                                 <MenuItem onClick={handleMenuClose} component={Link} to="/profile">
                                     Profile
                                 </MenuItem>
                                 <MenuItem onClick={handleMenuClose} component={Link} to="/settings">
                                     Settings
                                 </MenuItem>
-                                <MenuItem onClick={() => { handleMenuClose(); logout(); }}>
+                                <MenuItem
+                                    onClick={() => {
+                                        handleMenuClose();
+                                        logout();
+                                    }}
+                                >
                                     Logout
                                 </MenuItem>
                             </Menu>
