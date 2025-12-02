@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddScoped<IUserRepository, UserRepository>(); 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<ProductService>();
@@ -21,13 +21,22 @@ builder.Services.AddScoped<ReservationExpirationService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+// ---- DB CONFIG START ----
+var envName = builder.Environment.EnvironmentName;
 
-if (builder.Environment.EnvironmentName != "Testing")
+if (envName == "CI")
 {
+    // CI: use local SQLite file
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlite("Data Source=ci_test.db"));
+}
+else if (envName != "Testing")
+{
+    // Normal: use SQL Server connection string
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 }
-
+// ---- DB CONFIG END ----
 
 builder.Services.AddHostedService<ReservationExpirationService>();
 
@@ -78,16 +87,26 @@ builder.Services.AddAuthentication("Bearer")
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuerSigningKey = true,  
-            ValidateAudience = true,          
-            ValidateIssuer = true,          
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"]!)), 
+            ValidateIssuerSigningKey = true,
+            ValidateAudience = true,
+            ValidateIssuer = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"]!)),
             ValidAudience = builder.Configuration["AppSettings:Audience"],
-            ValidIssuer = builder.Configuration["AppSettings:Issuer"] 
+            ValidIssuer = builder.Configuration["AppSettings:Issuer"]
         };
     });
 
 var app = builder.Build();
+
+// ---- CI SEEDING START ----
+if (app.Environment.EnvironmentName == "CI")
+{
+    using var scope = app.Services.CreateScope();
+    var ctx = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    ctx.Database.EnsureCreated();          // create ci_test.db if missing
+    CiDatabaseSeeder.Seed(ctx);            // you'll create this class
+}
+// ---- CI SEEDING END ----
 
 if (app.Environment.IsDevelopment())
 {
@@ -95,7 +114,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "Madkassen API V1");
-        options.RoutePrefix = string.Empty;  // Optional: Show Swagger UI at the root ("/")
+        options.RoutePrefix = string.Empty;
     });
 }
 
@@ -111,4 +130,4 @@ app.MapControllers();
 
 app.Run();
 
-public partial class Program {}
+public partial class Program { }
