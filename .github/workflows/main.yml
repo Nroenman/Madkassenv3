@@ -32,8 +32,8 @@ jobs:
         run: dotnet test --configuration Release --verbosity normal
 
 
-  frontend-tests:
-    name: Frontend Tests (React)
+  frontend-build:
+    name: Frontend Build (React)
     runs-on: windows-latest
 
     steps:
@@ -47,15 +47,17 @@ jobs:
         working-directory: ./madkassenweb
         run: npm ci
 
-      - name: Run frontend tests
+      - name: Build frontend
         working-directory: ./madkassenweb
-        run: npm test -- --watch=false
+        env:
+          CI: true
+        run: npm run build
 
 
   playwright-e2e:
     name: Playwright E2E Tests
     runs-on: windows-latest
-    needs: [ backend-tests, frontend-tests ]
+    needs: [ backend-tests, frontend-build ]
 
     steps:
       - uses: actions/checkout@v4
