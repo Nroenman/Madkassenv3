@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/auth-login.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/auth-login.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/test-user-can-sort-allerge-199d1-dividually-and-all-together/trace.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/test-user-can-sort-by-cato-c8086-wse-all-categories-from-API/trace.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/user-can-add-products-to-cart-after-login.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/user-can-add-products-to-cart-after-login.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/user-can-buy-products.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/user-can-buy-products.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
