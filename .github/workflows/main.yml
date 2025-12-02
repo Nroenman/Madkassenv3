@@ -1,3 +1,64 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  backend-tests:
+    name: Backend Tests (.NET)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install backend OS dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sqlite3 libsqlite3-dev
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+
+      - name: Restore
+        working-directory: ./MadkassenRestAPI
+        run: dotnet restore
+
+      - name: Build
+        working-directory: ./MadkassenRestAPI
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run tests
+        working-directory: ./MadkassenTest
+        run: dotnet test --configuration Release --verbosity normal
+
+
+  frontend-build:
+    name: Frontend Build (React)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: ./madkassenweb/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./madkassenweb
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: ./madkassenweb
+        run: npm run build
+
+
   playwright-e2e:
     name: Playwright E2E Tests
     runs-on: ubuntu-latest
@@ -29,11 +90,11 @@
         working-directory: ./madkassenweb
         run: npx playwright install --with-deps
 
-      # 🔴 FIX: run backend WITHOUT launchSettings, in CI environment
+      # 🔴 Run backend WITHOUT launchSettings, in CI environment
       - name: Start backend API
         working-directory: ./MadkassenRestAPI
         env:
-          ASPNETCORE_ENVIRONMENT: CI        # important: triggers your CI branch in Program.cs
+          ASPNETCORE_ENVIRONMENT: CI        # triggers your CI branch in Program.cs
         run: |
           dotnet run --configuration Release --no-launch-profile --urls=http://localhost:5092 &
           sleep 25
