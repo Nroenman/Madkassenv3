@@ -4,7 +4,7 @@ using ClassLibrary;
 using MadkassenRestAPI.Models;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MadkassenTest.Intergration
+namespace MadkassenTest.Integration
 {
     public class AuthControllerTests : IClassFixture<CustomWebApplicationFactory>
     {
