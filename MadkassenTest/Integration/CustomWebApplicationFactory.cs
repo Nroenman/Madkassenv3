@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 
-namespace MadkassenTest.Intergration
+namespace MadkassenTest.Integration
 {
     public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
