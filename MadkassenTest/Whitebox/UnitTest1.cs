@@ -1,4 +1,4 @@
-﻿namespace MadkassenTest;
+﻿namespace MadkassenTest.Whitebox;
 
 public class UnitTest1
 {
