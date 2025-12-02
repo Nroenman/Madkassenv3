@@ -49,7 +49,7 @@ test('user can buy a product through checkout flow', async ({ page }) => {
     expect(cartUrl).toContain('/cart');
 
     // --- CLICK "Gennemfør køb!" ---
-    const checkoutButton = page.getByRole('button', { name: /Gennemfør køb/i });
+    const checkoutButton = page.getByRole('button', { name: /Gennemfør køb!?/i });
     await expect(checkoutButton).toBeVisible();
 
     // handle alert, and assert that we actually got one
