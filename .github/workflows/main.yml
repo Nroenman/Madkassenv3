@@ -1,0 +1,81 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  backend-tests:
+    name: Backend Tests (.NET)
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+
+      - name: Restore
+        working-directory: ./MadkassenRestAPI
+        run: dotnet restore
+
+      - name: Build
+        working-directory: ./MadkassenRestAPI
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run tests
+        working-directory: ./MadkassenTest
+        run: dotnet test --configuration Release --verbosity normal
+
+
+  frontend-tests:
+    name: Frontend Tests (React)
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        working-directory: ./madkassenweb
+        run: npm ci
+
+      - name: Run frontend tests
+        working-directory: ./madkassenweb
+        run: npm test -- --watch=false
+
+
+  playwright-e2e:
+    name: Playwright E2E Tests
+    runs-on: windows-latest
+    needs: [ backend-tests, frontend-tests ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        working-directory: ./madkassenweb
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: ./madkassenweb
+        run: npx playwright install
+
+      - name: Build frontend
+        working-directory: ./madkassenweb
+        run: npm run build
+
+      - name: Run Playwright tests
+        working-directory: ./madkassenweb
+        run: npx playwright test
