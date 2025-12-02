@@ -8,6 +8,9 @@ on:
 
 jobs:
 
+  # ------------------------------
+  #   BACKEND TESTS (.NET)
+  # ------------------------------
   backend-tests:
     name: Backend Tests (.NET)
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install backend OS dependencies
+      - name: Install OS dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y sqlite3 libsqlite3-dev
@@ -37,6 +40,10 @@ jobs:
         run: dotnet test --configuration Release --verbosity normal
 
 
+
+  # ------------------------------
+  #   FRONTEND BUILD (React)
+  # ------------------------------
   frontend-build:
     name: Frontend Build (React)
     runs-on: ubuntu-latest
@@ -59,6 +66,10 @@ jobs:
         run: npm run build
 
 
+
+  # ------------------------------
+  #   PLAYWRIGHT E2E TESTS
+  # ------------------------------
   playwright-e2e:
     name: Playwright E2E Tests
     runs-on: ubuntu-latest
@@ -90,16 +101,19 @@ jobs:
         working-directory: ./madkassenweb
         run: npx playwright install --with-deps
 
-      # 🔴 Run backend WITHOUT launchSettings, in CI environment
+      # 🚀 Start backend API in CI environment
       - name: Start backend API
         working-directory: ./MadkassenRestAPI
         env:
-          ASPNETCORE_ENVIRONMENT: CI        # triggers your CI branch in Program.cs
+          ASPNETCORE_ENVIRONMENT: CI
+          ASPNETCORE_URLS: http://0.0.0.0:5092
         run: |
-          dotnet run --configuration Release --no-launch-profile --urls=http://localhost:5092 &
-          sleep 25
+          dotnet run --configuration Release --no-launch-profile > backend.log 2>&1 &
+          sleep 20
+          echo "=== Backend log (initial) ==="
+          sed -n '1,200p' backend.log || true
 
-      # ✅ Wait for backend health
+      # 🩺 Wait for backend
       - name: Wait for backend health
         run: |
           for i in {1..10}; do
@@ -110,7 +124,10 @@ jobs:
             echo "Backend not up yet, retry $i..."
             sleep 3
           done
-          echo "Backend failed to start ❌"
+
+          echo "Backend FAILED to start ❌"
+          echo "=== Backend log (final) ==="
+          sed -n '1,200p' MadkassenRestAPI/backend.log || true
           curl -v http://localhost:5092/api/health || true
           exit 1
 
@@ -119,14 +136,14 @@ jobs:
         working-directory: ./madkassenweb
         run: npm run build
 
-      # Start static server for built frontend (http://localhost:3000)
+      # Serve static frontend
       - name: Start frontend static server
         working-directory: ./madkassenweb
         run: |
           serve -s build -l 3000 &
           wait-on http://localhost:3000
 
-      # Run Playwright tests
+      # 🧪 Run Playwright tests
       - name: Run Playwright tests
         working-directory: ./madkassenweb
         run: npx playwright test
