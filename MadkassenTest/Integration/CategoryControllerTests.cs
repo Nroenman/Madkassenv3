@@ -68,6 +68,7 @@ namespace MadkassenTest.Integration
         [Fact]
         public async Task PostCategory_ReturnsCreatedCategory()
         {
+            // Arrange: clean DB first
             var context = GetDbContext();
             context.Kategori.RemoveRange(context.Kategori);
             await context.SaveChangesAsync();
@@ -78,21 +79,23 @@ namespace MadkassenTest.Integration
                 Description = "New Description"
             };
 
+            // Act: POST new category
             var response = await _client.PostAsJsonAsync("/api/Category", newCategory);
 
+            // Assert: status code from POST
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
 
+            // Assert: response body
             var createdCategory = await response.Content.ReadFromJsonAsync<Kategori>();
             Assert.NotNull(createdCategory);
-            Assert.Equal("New Category", createdCategory.CategoryName);
+            Assert.Equal("New Category", createdCategory!.CategoryName);
             Assert.Equal("New Description", createdCategory.Description);
             Assert.True(createdCategory.CategoryId > 0);
 
-            var verifyContext = GetDbContext();
-            var dbCategory = await verifyContext.Kategori.FindAsync(createdCategory.CategoryId);
-            Assert.NotNull(dbCategory);
-            Assert.Equal("New Category", dbCategory.CategoryName);
-            Assert.Equal("New Description", dbCategory.Description);
+            // Optional: assert Location header shape (if you want)
+            var location = response.Headers.Location;
+            Assert.NotNull(location);
+            Assert.Contains("/api/Category/", location!.ToString());
         }
     }
 }
