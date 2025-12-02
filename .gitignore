@@ -1,15 +1,18 @@
+# Build output
 bin/
 obj/
-/packages/
+packages/
+.fake
+
+# Rider / ReSharper / IntelliJ
 riderModule.iml
 /_ReSharper.Caches/
-.fake
-/madkassenweb/.idea
-/madkassenweb
-/madkassenweb/.idea
-/.idea/.idea.Madkassen/.idea
-/UnitTestOrder
-/UnitTestOrder
+.idea/
+*.iml
+
+# Unit test temp folder (if you really have this)
+UnitTestOrder/
+madkassenweb/.idea/workspace.xml
 /madkassenweb/.idea
 # Visual Studio / test cache
 .vs/
