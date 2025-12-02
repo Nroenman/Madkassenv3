@@ -11,7 +11,6 @@ test('User can filter products by each allergy individually and all together', a
     const allergyHeader = page.getByText('Filtrer Allergener');
     await allergyHeader.click();
 
-    // All allergy labels in order
     const allergyNames = ['Gluten', 'Laktose', 'Nødder', 'Skaldyr', 'Soya', 'Æg'];
 
     // Product card locator
@@ -21,13 +20,10 @@ test('User can filter products by each allergy individually and all together', a
     const baselineCount = await productCards.count();
     expect(baselineCount).toBeGreaterThan(0);
 
-    //
-    // === INDIVIDUAL ALLERGY TESTING ===
-    //
+
     for (const name of allergyNames) {
         const checkbox = page.getByLabel(name);
 
-        // Check this allergy
         await checkbox.click();
         await page.waitForTimeout(250);
 
