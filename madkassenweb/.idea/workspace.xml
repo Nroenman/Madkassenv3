@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MadkassenRestAPI/Models/CiDatabaseSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MadkassenRestAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MadkassenRestAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +29,12 @@
     &quot;assignee&quot;: &quot;Nroenman&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Nroenman/Madkassenv2.git",
-    "accountId": "7f8b97b4-eaab-4e71-85e3-57b5cea5505e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Nroenman/Madkassenv2.git&quot;,
+    &quot;accountId&quot;: &quot;7f8b97b4-eaab-4e71-85e3-57b5cea5505e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
