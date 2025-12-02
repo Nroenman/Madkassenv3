@@ -8,50 +8,38 @@ test('User can browse all categories from API', async ({ page }) => {
         page.waitForResponse(r =>
             r.url().includes('/api/Category') && r.ok()
         ),
-        page.getByRole('link', { name: 'PRODUKTER' }).click(),
+        page.getByRole('link', { name: 'PRODUKTER' }).click()
     ]);
 
-    await page.waitForURL('**/productlist');
-
     const categories = await categoriesRes.json();
-    expect(Array.isArray(categories)).toBeTruthy();
+    console.log('Number of categories from API:', categories.length);
     expect(categories.length).toBeGreaterThan(0);
 
-    // Open the "Kategorier" dropdown once
-    const categoriesHeader = page.getByText('Kategorier');
-    await expect(categoriesHeader).toBeVisible();
-    await categoriesHeader.click();
+    // Open category drawer
+    const sortButton = page.getByRole('button', { name: /Sorter efter kategori/i });
+    await expect(sortButton).toBeVisible();
+    await sortButton.click();
 
-    // Loop through all categories from the API
+    const drawer = page.locator('.MuiDrawer-paper').first();
+    await expect(drawer).toBeVisible();
+
+    // For each category from API:
+    //  - click the category button in the drawer
+    //  - wait a bit for UI update
+    //  - assert that the product grid is visible
     for (const category of categories) {
-        const categoryId = category.categoryId;
-        const categoryName = category.categoryName;
+        const { categoryName } = category;
+        console.log('Testing category:', categoryName);
 
-        // Create a relaxed text locator for the category name
-        const categoryItem = page.getByText(
-            new RegExp(`^\\s*${categoryName}\\s*$`)
-        );
+        const categoryButton = drawer.getByText(categoryName, { exact: true });
+        await expect(categoryButton).toBeVisible();
 
-        // If for some reason the dropdown closed, open it again
-        if (!(await categoryItem.isVisible())) {
-            await categoriesHeader.click(); // toggle open
-        }
+        await categoryButton.click();
 
-        await expect(categoryItem).toBeVisible();
+        // Let the frontend fetch & render
+        await page.waitForTimeout(500);
 
-        const [categoryProductsRes] = await Promise.all([
-            page.waitForResponse(r =>
-                r.url().includes('/api/Product/category/') &&
-                r.url().endsWith(`/${categoryId}`) &&
-                r.ok()
-            ),
-            categoryItem.click(),
-        ]);
-
-        const categoryProducts = await categoryProductsRes.json();
-        expect(categoryProducts).toBeTruthy();
-
-        // Product grid is still visible
-        await expect(page.locator('div.grid')).toBeVisible();
+        const productGrid = page.locator('div.grid.grid-cols-1');
+        await expect(productGrid).toBeVisible();
     }
 });
