@@ -80,14 +80,20 @@ jobs:
           Start-Process dotnet -ArgumentList "run --urls=http://localhost:5092" -NoNewWindow
           Start-Sleep -Seconds 15
 
-      # Start frontend dev server (http://localhost:3000)
-      - name: Start frontend dev server
+      # Build frontend for E2E
+      - name: Build frontend
+        working-directory: ./madkassenweb
+        run: npm run build
+
+      # Start static server for built frontend (http://localhost:3000)
+      - name: Start frontend static server
         working-directory: ./madkassenweb
         shell: pwsh
         run: |
-          Start-Process npm -ArgumentList "start" -NoNewWindow
+          Start-Process npx -ArgumentList "serve -s build -l 3000" -NoNewWindow
           npx wait-on http://localhost:3000
 
+      # Run Playwright tests
       - name: Run Playwright tests
         working-directory: ./madkassenweb
         run: npx playwright test
