@@ -3,6 +3,22 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ADbContext_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fa0b45f29f34f594814a7b1fbc25fe5ef3c18257956ed4f4fbfa68717db58_003FDbContext_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionDispatchInfo_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fbd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182_003FExceptionDispatchInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASwaggerUIBuilderExtensions_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F4c192aa6dafb8d276af3550bdd68428bd01e63aabade742b412f9e664dd4a_003FSwaggerUIBuilderExtensions_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=321f3fce_002D597d_002D4d5e_002Daa30_002Ddb90737fa43a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from UnitTest1.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;C0297BDB-54FC-47EA-B6DC-456AA7C37FEE/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;Project Location="C:\Users\kader\Desktop\Test\Madkassenv2\UnitTestOrder" Presentation="&amp;lt;UnitTestOrder&amp;gt;" /&gt;&#xD;
+      &lt;Test&gt;&#xD;
+        &lt;TestId&gt;xUnit::C0297BDB-54FC-47EA-B6DC-456AA7C37FEE::net9.0::UnitTest.OrderServiceTests&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::C0297BDB-54FC-47EA-B6DC-456AA7C37FEE::net9.0::UnitTest.OrderServiceTests.CreateOrderAsync_ReturnsCorrectOrderId&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests.AddToCart_ValidRequest_ReturnsOk&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests.AddToCart_InvalidQuantity_ReturnsBadRequest&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests.GetCartItems_ExistingCart_ReturnsCartItems&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests.GetCartItems_EmptyCart_ReturnsEmptyList&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests.UpdateCartItem_ValidRequest_ReturnsOk&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::AF7E8490-D098-42D1-A4BD-8ECA39194C2A::net9.0::IntegrationTest.CartControllerTests.RemoveCartItem_ValidRequest_ReturnsOk&lt;/TestId&gt;&#xD;
+      &lt;/Test&gt;&#xD;
+    &lt;/And&gt;&#xD;
+  &lt;/Not&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

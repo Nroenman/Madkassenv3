@@ -126,6 +126,18 @@ namespace MadkassenRestAPI.Models
                 .IsRequired();
 
             modelBuilder.Entity<CartItem>()
+                .Property(c => c.AddedAt)
+                .HasColumnName("AddedAt")
+                .HasColumnType("datetime2")
+                .IsRequired();
+
+            modelBuilder.Entity<CartItem>()
+                .Property(c => c.ExpirationTime)
+                .HasColumnName("ExpirationTime")
+                .HasColumnType("datetime2")
+                .IsRequired();
+
+            modelBuilder.Entity<CartItem>()
                 .HasOne(c => c.Produkter)
                 .WithMany()
                 .HasForeignKey(c => c.ProductId);
