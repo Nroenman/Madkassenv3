@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using MadkassenRestAPI.Controllers;
+﻿using MadkassenRestAPI.Controllers;
 using MadkassenRestAPI.Models;
 using MadkassenRestAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Moq;
-using Xunit;
+using IConfiguration = Castle.Core.Configuration.IConfiguration;
 
-namespace MadkassenRestAPI.BlackBoxTests.Controllers
+namespace MadkassenTest.Blackbox.Controllers
 {
     public class AuthControllerTests
     {
-        private IConfiguration CreateFakeConfig()
+        private IConfigurationRoot CreateFakeConfig()
         {
             var dict = new Dictionary<string, string>
             {
@@ -22,7 +20,7 @@ namespace MadkassenRestAPI.BlackBoxTests.Controllers
             };
 
             return new ConfigurationBuilder()
-                .AddInMemoryCollection(dict)
+                .AddInMemoryCollection(dict!)
                 .Build();
         }
 

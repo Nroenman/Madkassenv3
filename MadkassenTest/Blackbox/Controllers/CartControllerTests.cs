@@ -1,10 +1,8 @@
-﻿using System.Threading.Tasks;
-using ClassLibrary;
+﻿using ClassLibrary;
 using ClassLibrary.Model;
 using MadkassenRestAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Xunit;
 using Microsoft.Data.Sqlite;
 
 public class CartControllerTests

@@ -5,9 +5,8 @@ using ClassLibrary.Model;
 using MadkassenRestAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 
-namespace IntegrationTest
+namespace MadkassenTest.Intergration
 {
     public class CartControllerTests : IClassFixture<CustomWebApplicationFactory>
     {

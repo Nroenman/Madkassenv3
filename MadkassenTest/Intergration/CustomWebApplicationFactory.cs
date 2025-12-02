@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using MadkassenRestAPI.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using MadkassenRestAPI.Models;
 
-namespace IntegrationTest
+namespace MadkassenTest.Intergration
 {
     public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {

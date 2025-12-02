@@ -1,15 +1,10 @@
 using System.Net;
 using System.Net.Http.Json;
-using BCrypt.Net;
 using ClassLibrary;
-using ClassLibrary.Model;
 using MadkassenRestAPI.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
-using Microsoft.Extensions.Configuration;
 
-namespace IntegrationTest
+namespace MadkassenTest.Intergration
 {
     public class AuthControllerTests : IClassFixture<CustomWebApplicationFactory>
     {

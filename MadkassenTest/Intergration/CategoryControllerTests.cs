@@ -1,24 +1,16 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
 using ClassLibrary;
-using ClassLibrary.Model;
 using MadkassenRestAPI.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 
-namespace IntegrationTest
+namespace MadkassenTest.Intergration
 {
-    public class CategoryControllerTests : IClassFixture<CustomWebApplicationFactory>
+    public class CategoryControllerTests(CustomWebApplicationFactory factory)
+        : IClassFixture<CustomWebApplicationFactory>
     {
-        private readonly HttpClient _client;
-        private readonly CustomWebApplicationFactory _factory;
-
-        public CategoryControllerTests(CustomWebApplicationFactory factory)
-        {
-            _factory = factory;
-            _client = factory.CreateClient();
-        }
+        private readonly HttpClient _client = factory.CreateClient();
+        private readonly CustomWebApplicationFactory _factory = factory;
 
         private ApplicationDbContext GetDbContext()
         {

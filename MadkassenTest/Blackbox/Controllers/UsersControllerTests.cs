@@ -1,16 +1,14 @@
-﻿using ClassLibrary;
-using ClassLibrary.Model;                 // DTO: Users
+﻿// DTO: Users
+// Entity: User + ApplicationDbContext
+
+using ClassLibrary;
 using MadkassenRestAPI.Controllers;
-using MadkassenRestAPI.Models;          // Entity: User + ApplicationDbContext
+using MadkassenRestAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Xunit;
 
-namespace MadkassenRestAPI.BlackBoxTests.Controllers
+namespace MadkassenTest.Blackbox.Controllers
 {
     public class UsersControllerTests
     {
