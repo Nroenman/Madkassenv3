@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MadkassenTest.Integration
 {
+    [Collection("Auth Tests")]
     public class AuthControllerTests : IClassFixture<CustomWebApplicationFactory>
     {
         private readonly HttpClient _client;

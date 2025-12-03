@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MadkassenTest.Integration
 {
+    [Collection("Cart Tests")]
     public class CartControllerTests : IClassFixture<CustomWebApplicationFactory>
     {
         private readonly HttpClient _client;
@@ -110,6 +111,31 @@ namespace MadkassenTest.Integration
             var response = await _client.PostAsJsonAsync("/api/cart/add-to-cart", request);
 
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task AddToCart_NotEnoughStock_ReturnsBadRequest()
+        {
+            var (userId, productId) = await SeedDatabase();
+
+            var context = GetDbContext();
+            var product = await context.Produkter.FindAsync(productId);
+            product!.StockLevel = 3;
+            await context.SaveChangesAsync();
+
+            var request = new AddToCartRequest
+            {
+                ProductId = productId,
+                UserId = userId,
+                Quantity = 5
+            };
+
+            var response = await _client.PostAsJsonAsync("/api/cart/add-to-cart", request);
+
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+            var content = await response.Content.ReadAsStringAsync();
+            Assert.Contains("Not enough stock available", content);
         }
 
         [Fact]
