@@ -174,7 +174,7 @@ jobs:
         working-directory: ./MadkassenRestAPI
         run: dotnet restore
 
-      # 🚀 Start backend API på samme URL som Postman bruger
+      #  Start backend API på samme URL som Postman bruger
       - name: Start backend API
         working-directory: ./MadkassenRestAPI
         env:
@@ -186,7 +186,7 @@ jobs:
           echo "=== Backend log (initial) ==="
           sed -n '1,80p' backend.log || true
 
-      # 🩺 Vent på backend health (HTTPS + self-signed cert → -k)
+      #  Vent på backend health (HTTPS + self-signed cert → -k)
       - name: Wait for backend health
         run: |
           for i in {1..10}; do
@@ -204,7 +204,7 @@ jobs:
           curl -k -v https://localhost:7088/api/health || true
           exit 1
 
-      # 📦 Installér Newman (Postman CLI)
+      #  Installér Newman (Postman CLI)
       - name: Install newman
         run: npm install -g newman
 
