@@ -12,6 +12,7 @@ namespace MadkassenTest.Integration
 {
     public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
+        private readonly string _dbName = Guid.NewGuid().ToString();
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
             builder.UseEnvironment("Testing");
@@ -53,7 +54,7 @@ namespace MadkassenTest.Integration
             {
                 services.AddDbContext<ApplicationDbContext>(options =>
                 {
-                    options.UseInMemoryDatabase("TestDatabase")
+                    options.UseInMemoryDatabase(_dbName)
                         .ConfigureWarnings(warnings => warnings.Ignore(InMemoryEventId.TransactionIgnoredWarning));
                 });
 
