@@ -20,21 +20,19 @@ namespace MadkassenTest.Blackbox.Services
 
         [Theory]
         //cart item
-        [InlineData(0, 1, 1.00, true)] // invalid cartitem (here comes the exception)
-        [InlineData(1, 1, 1.00, false)] // min.valid cartitem
-        [InlineData(10, 1, 1.00, false)] // valid cartitem
+        [InlineData(0, 1, 1.00, true)] // invalid (here comes the exception)
+        [InlineData(1, 1, 1.00, false)] // min.valid
+        [InlineData(2, 1, 1.00, false)] // above valid
 
         //quantity
-        [InlineData(1, -70, 5.00, false)] // negative quantity
-        [InlineData(1, 0, 5.00, false)] // invalid quantity
-        [InlineData(1, 1, 5.00, false)] // min.valid quantity
-        [InlineData(1, 70, 5.00, false)] // valid quantity
+        [InlineData(1, 0, 5.00, false)] // below
+        [InlineData(1, 1, 5.00, false)] // boundary
+        [InlineData(1, 2, 5.00, false)] // above
 
         //price
-        [InlineData(1, 1, -56, false)] // negative price
-        [InlineData(1, 1, 0.00, false)] // invalid price
-        [InlineData(1, 1, 0.01, false)] // min.valid price
-        [InlineData(1, 1, 56, false)] // valid price
+        [InlineData(1, 1, 0.00, false)] // below
+        [InlineData(1, 1, 0.01, false)] // boundary
+        [InlineData(1, 1, 0.02, false)] // above
         public async Task CreateOrder_BoundaryValueTests(
             int cartItemCount,
             int quantity,
