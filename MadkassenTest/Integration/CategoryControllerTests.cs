@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MadkassenTest.Integration
 {
+    [Collection("Category Tests")]
     public class CategoryControllerTests(CustomWebApplicationFactory factory)
         : IClassFixture<CustomWebApplicationFactory>
     {

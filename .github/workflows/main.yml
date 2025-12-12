@@ -147,3 +147,67 @@ jobs:
       - name: Run Playwright tests
         working-directory: ./madkassenweb
         run: npx playwright test
+
+  # ------------------------------
+  #   POSTMAN API TESTS (Newman)
+  # ------------------------------
+  postman-api-tests:
+    name: Postman API Tests
+    runs-on: ubuntu-latest
+    needs: [ backend-tests ]   # kør først når backend build + tests er ok
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # .NET til at køre backend
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+
+      # Node til Newman
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Restore backend
+      - name: Restore backend
+        working-directory: ./MadkassenRestAPI
+        run: dotnet restore
+
+      #  Start backend API på samme URL som Postman bruger
+      - name: Start backend API
+        working-directory: ./MadkassenRestAPI
+        env:
+          ASPNETCORE_ENVIRONMENT: CI
+          ASPNETCORE_URLS: https://localhost:7088
+        run: |
+          dotnet run --configuration Release --no-launch-profile > backend.log 2>&1 &
+          sleep 15
+          echo "=== Backend log (initial) ==="
+          sed -n '1,80p' backend.log || true
+
+      #  Vent på backend health (HTTPS + self-signed cert → -k)
+      - name: Wait for backend health
+        run: |
+          for i in {1..10}; do
+            if curl -k -sSf https://localhost:7088/api/health > /dev/null; then
+              echo "Backend is UP ✅"
+              exit 0
+            fi
+            echo "Backend not up yet, retry $i..."
+            sleep 3
+          done
+
+          echo "Backend FAILED to start ❌"
+          echo "=== Backend log (final) ==="
+          sed -n '1,200p' MadkassenRestAPI/backend.log || true
+          curl -k -v https://localhost:7088/api/health || true
+          exit 1
+
+      #  Installér Newman (Postman CLI)
+      - name: Install newman
+        run: npm install -g newman
+
+      # 🧪 Kør Postman collection
+      - name: Run Postman tests
+        run:  newman run Postman/Madkassen.postman_collection.json --insecure

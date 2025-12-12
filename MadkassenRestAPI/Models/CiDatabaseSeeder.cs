@@ -10,9 +10,7 @@ namespace MadkassenRestAPI.Models
     {
         public static void Seed(ApplicationDbContext ctx)
         {
-            // ----------------------------------------------------
-            // 1. Seed ALL categories (your full list, 23 rows)
-            // ----------------------------------------------------
+      
             if (!ctx.Kategori.Any())
             {
                 var categories = new[]
@@ -46,7 +44,6 @@ namespace MadkassenRestAPI.Models
                 ctx.SaveChanges();
             }
 
-            // Grab a few important categories for products
             var mejeri     = ctx.Kategori.First(c => c.CategoryName == "Mejeri");
             var frugter    = ctx.Kategori.First(c => c.CategoryName == "Frugter");
             var koed       = ctx.Kategori.First(c => c.CategoryName == "Kød");
@@ -54,9 +51,7 @@ namespace MadkassenRestAPI.Models
             var noedderCat = ctx.Kategori.First(c => c.CategoryName == "Nødder og Tørret Frugt");
             var fiskSkal   = ctx.Kategori.First(c => c.CategoryName == "Fisk og Skaldyr");
 
-            // ----------------------------------------------------
-            // 2. Seed products (enough to satisfy all Playwright tests)
-            // ----------------------------------------------------
+           
             if (!ctx.Produkter.Any())
             {
                 ctx.Produkter.AddRange(
@@ -103,7 +98,6 @@ namespace MadkassenRestAPI.Models
                         Price = 20m,
                         StockLevel = 40,
                         CategoryId = glutenfri.CategoryId,
-                        // If your enum has Gluten, you can set it here. Otherwise leave null.
                         AllergyType = null
                     },
                     new Produkter
@@ -113,7 +107,6 @@ namespace MadkassenRestAPI.Models
                         Price = 30m,
                         StockLevel = 60,
                         CategoryId = noedderCat.CategoryId,
-                        // If your enum has Nødder, you can set it here. Otherwise leave null.
                         AllergyType = null
                     },
                     new Produkter
@@ -130,16 +123,11 @@ namespace MadkassenRestAPI.Models
                 ctx.SaveChanges();
             }
 
-            // ----------------------------------------------------
-            // 3. Seed test user (BCrypt password for login in CI)
-            // ----------------------------------------------------
             if (!ctx.Users.Any(u => u.Email == "Test1@test.com"))
             {
                 var now = DateTime.UtcNow;
 
-                // Password the user logs in with in Playwright:
-                //   Email:    Test1@test.com
-                //   Password: Test1@test.com
+             
                 string hashedPassword = BCrypt.Net.BCrypt.HashPassword("Test1@test.com");
 
                 ctx.Users.Add(new Users
