@@ -14,11 +14,11 @@ public class ProductService(ApplicationDbContext context)
     public async Task<Produkter> GetProductByIdAsync(int id)
     {
         var product = await context.Produkter.FindAsync(id);
-        if (product == null)
+        if (product == null) 
         {
-            return null;
+            return null; 
         }
-        return product;
+        return product; 
     }
 
     public async Task<Produkter> AddProductAsync(Produkter product)
@@ -32,7 +32,7 @@ public class ProductService(ApplicationDbContext context)
             .FirstOrDefaultAsync(p => p.ProductName == product.ProductName);
         if (existingProduct != null)
         {
-            throw new InvalidOperationException($"Product with name {product.ProductName} already exists.");
+            throw new InvalidOperationException($"Product with name {product.ProductName} already exists."); // Prevents adding duplicate products
         }
 
         context.Produkter.Add(product);
@@ -48,7 +48,7 @@ public class ProductService(ApplicationDbContext context)
             return null;
         }
 
-        if (quantity < 0 && product.StockLevel < Math.Abs(quantity))
+        if (quantity < 0 && product.StockLevel < Math.Abs(quantity)) 
         {
             return null;
         }
