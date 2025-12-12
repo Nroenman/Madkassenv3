@@ -69,9 +69,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product",
+					"raw": "{{baseurl}}Product",
 					"host": [
-						"{{BaseUrl}}Product"
+						"{{baseurl}}Product"
 					]
 				}
 			},
@@ -131,9 +131,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Auth",
+					"raw": "{{baseurl}}Auth",
 					"host": [
-						"{{BaseUrl}}Auth"
+						"{{baseurl}}Auth"
 					]
 				}
 			},
@@ -195,9 +195,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}Users/profile",
+					"raw": "{{baseurl}}Users/profile",
 					"host": [
-						"{{BaseUrl}}Users"
+						"{{baseurl}}Users"
 					],
 					"path": [
 						"profile"
@@ -284,9 +284,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product",
+					"raw": "{{baseurl}}Product",
 					"host": [
-						"{{BaseUrl}}Product"
+						"{{baseurl}}Product"
 					]
 				}
 			},
@@ -352,9 +352,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "{{baseurl}}Product/{{CreatedProductId}}",
 					"host": [
-						"{{BaseUrl}}Product"
+						"{{baseurl}}Product"
 					],
 					"path": [
 						"{{CreatedProductId}}"
@@ -444,9 +444,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "{{baseurl}}Product/{{CreatedProductId}}",
 					"host": [
-						"{{BaseUrl}}Product"
+						"{{baseurl}}Product"
 					],
 					"path": [
 						"{{CreatedProductId}}"
@@ -501,9 +501,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "{{baseurl}}Product/{{CreatedProductId}}",
 					"host": [
-						"{{BaseUrl}}Product"
+						"{{baseurl}}Product"
 					],
 					"path": [
 						"{{CreatedProductId}}"
@@ -550,9 +550,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "{{baseurl}}Product/{{CreatedProductId}}",
 					"host": [
-						"{{BaseUrl}}Product"
+						"{{baseurl}}Product"
 					],
 					"path": [
 						"{{CreatedProductId}}"
