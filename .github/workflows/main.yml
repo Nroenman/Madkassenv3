@@ -211,5 +211,5 @@ jobs:
       # 🧪 Kør Postman collection
       - name: Run Postman tests
         run: newman run Postman/Madkassen.postman_collection_Final.json \
-         --environment Postman/MadKassen-Env.postman_environment_Final.json \
+         --environment Postman/Madkassen_Finalenv.postman_environment_Final.json \
          --insecure
