@@ -215,6 +215,8 @@ namespace MadkassenTest.Blackbox.Services
             Assert.True(context.Produkter.Any(p => p.ProductName == "Sprite"));
         }
 
+
+
         //-----------------------------------------------------------------
         // Unit tests for GetAllProductsAsync
 

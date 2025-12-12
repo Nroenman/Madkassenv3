@@ -33,9 +33,7 @@ namespace MadkassenTest.Blackbox.Services
         }
 
 
-        // ==================================================================
         // AUTHENTICATE – BLACK BOX TESTS (3 rules)
-        // ==================================================================
 
         // R1: email findes ikke → return null
         [Fact]
@@ -108,14 +106,11 @@ namespace MadkassenTest.Blackbox.Services
         }
 
 
-
-        // ==================================================================
         // GET USER FROM JWT TOKEN – BLACK BOX TESTS (4 rules)
-        // ==================================================================
 
         // R1: Token er IKKE et JWT → SecurityTokenMalformedException
         [Fact]
-        public void GetUserFromJwtToken_InvalidToken_Throws()
+        public void GetUserFromJwtToken_InvalidToken_Throws() 
         {
             // ARRANGE
             var context = CreateContext();
