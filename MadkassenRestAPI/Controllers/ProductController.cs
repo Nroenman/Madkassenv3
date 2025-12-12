@@ -23,7 +23,7 @@ namespace MadkassenRestAPI.Controllers
                 if (string.IsNullOrEmpty(product.ImageUrl))
                 {
                     product.ImageUrl =
-                        "https://i.imghippo.com/files/KCsO2582jBE.png"; // Apply placeholder if null or empty
+                        "https://i.imghippo.com/files/JD3213WcI.jpg"; // Apply placeholder if null or empty
                 }
             }
 
