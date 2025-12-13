@@ -1,0 +1,38 @@
+/* eslint-disable */
+import http from "k6/http";
+import { check, sleep } from "k6";
+
+export const options = {
+    stages: [
+        { duration: "30s", target: 20 },   // baseline traffic
+        { duration: "5s",  target: 600 },  // 🚨 sudden spike
+        { duration: "20s", target: 600 },  // short peak
+        { duration: "5s",  target: 20 },   // fast recovery
+        { duration: "30s", target: 0 },    // cool down
+    ],
+    thresholds: {
+        http_req_failed: ["rate<0.02"],
+        http_req_duration: ["p(95)<500"],  // may fail under spike (that’s OK)
+    },
+};
+
+export default function () {
+    const res = http.get("http://localhost:5092/api/Product", {
+        tags: { name: "GET /api/Product (spike)" },
+    });
+
+    check(res, {
+        "status is 200": (r) => r.status === 200,
+        "returns JSON": (r) =>
+            (r.headers["Content-Type"] || "").includes("application/json"),
+        "has products": (r) => {
+            try {
+                return r.json().length > 0;
+            } catch {
+                return false;
+            }
+        },
+    });
+
+    sleep(Math.random() + 0.2);
+}

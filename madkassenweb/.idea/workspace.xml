@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/stresstest/loginload.k6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stresstest/product-stress-load.k6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stresstest/product-stress-spike.k6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stresstest/loginstres.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/loginstres.k6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stresstest/product-stresstest.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/product-stresstest.k6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stresstest/loginspike.k6.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/loginspike.k6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +32,12 @@
     &quot;assignee&quot;: &quot;Nroenman&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Nroenman/Madkassenv2.git",
-    "accountId": "da050009-ae6a-4cc3-bc6a-c96f2518c01f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nroenman/Madkassenv2.git&quot;,
+    &quot;accountId&quot;: &quot;da050009-ae6a-4cc3-bc6a-c96f2518c01f&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -50,27 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Playwright.auth-login.spec.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "StressTest",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "C:/Users/nikol/RiderProjects/Madkassenv2/madkassenweb",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "ts.external.directory.path": "C:\\Users\\Nikolai\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Playwright.auth-login.spec.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;StressTest&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikol/RiderProjects/Madkassenv2/madkassenweb&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Nikolai\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nikol\RiderProjects\Madkassenv2\madkassenweb\stresstest" />
@@ -100,6 +100,7 @@
       <workItem from="1764621520563" duration="1860000" />
       <workItem from="1764630388412" duration="3050000" />
       <workItem from="1765654681955" duration="358000" />
+      <workItem from="1765659492697" duration="5708000" />
     </task>
     <servers />
   </component>
@@ -109,5 +110,16 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="javascript:npm:react" />
     <option featureType="dependencySupport" implementationName="javascript:npm:tailwindcss" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

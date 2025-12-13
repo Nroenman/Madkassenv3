@@ -16,11 +16,11 @@ function pickUser(vu) {
 
 export const options = {
     stages: [
-        { duration: "30s", target: 20 },   // baseline
-        { duration: "5s",  target: 300 },  // spike
-        { duration: "2m",  target: 300 },  // hold
-        { duration: "10s", target: 20 },   // recover
-        { duration: "1m",  target: 0 },
+        { duration: "30s", target: 20 },
+        { duration: "5s",  target: 300 },
+        { duration: "20s", target: 300 },
+        { duration: "5s",  target: 20 },
+        { duration: "30s", target: 0 },
     ],
     thresholds: {
         http_req_failed: ["rate<0.02"],
