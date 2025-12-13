@@ -315,6 +315,177 @@
 			"response": []
 		},
 		{
+			"name": "Get CreatedProduct by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response time is under 1300ms\", function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1300)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains expected product fields\", function () {\r",
+							"    const body = pm.response.json();\r",
+							"\r",
+							"    [\r",
+							"        \"productId\",\r",
+							"        \"productName\",\r",
+							"        \"description\",\r",
+							"        \"categoryId\",\r",
+							"        \"allergies\",\r",
+							"        \"allergyType\",\r",
+							"        \"price\",\r",
+							"        \"stockLevel\",\r",
+							"        \"imageUrl\"\r",
+							"    ].forEach(f => {\r",
+							"        pm.expect(body, `Missing field '${f}'`).to.have.property(f);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"productId in response matches CreatedProductId\", function () {\r",
+							"    const body = pm.response.json();\r",
+							"    const idFromVar = pm.globals.get(\"CreatedProductId\")  \r",
+							"\r",
+							"    pm.expect(body.productId.toString()).to.eql(idFromVar.toString());\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Save original product for later comparison\", function () {\r",
+							"    const original = pm.response.json();\r",
+							"    pm.globals.set(\"OriginalProduct\", JSON.stringify(original));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7088/api/Product/{{CreatedProductId}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7088",
+					"path": [
+						"api",
+						"Product",
+						"{{CreatedProductId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 204\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"ID in URL matches ID in response\", function () {\r",
+							"     const idFromUrl = pm.globals.get(\"CreatedProductId\");\r",
+							"     const res = pm.response.json();\r",
+							"\r",
+							"    pm.expect(res.productId.toString()).to.equal(idFromUrl.toString());\r",
+							"});\r",
+							"\r",
+							"pm.test(\"StockLevel = original + Quantity from request\", function () {\r",
+							"    const updated = pm.response.json();\r",
+							"\r",
+							"    // 1) Hent original produkt (fra GET før PUT)\r",
+							"    const originalRaw = pm.globals.get(\"OriginalProduct\");\r",
+							"    pm.expect(originalRaw, \"Original product is missing\").to.not.be.undefined;\r",
+							"\r",
+							"    const original = JSON.parse(originalRaw);\r",
+							"\r",
+							"    // 2) Parse request body og find Quantity\r",
+							"    let delta = 0;\r",
+							"\r",
+							"    if (pm.request.body && pm.request.body.mode === \"raw\") {\r",
+							"        const raw = pm.request.body.raw || \"{}\";\r",
+							"        try {\r",
+							"            const sent = JSON.parse(raw);\r",
+							"\r",
+							"            // Tjek både 'Quantity' og 'quantity' for en sikkerheds skyld\r",
+							"            delta = Number(sent.Quantity ?? sent.quantity ?? 0);\r",
+							"        } catch (e) {\r",
+							"            console.log(\"Failed to parse request body as JSON:\", raw, e);\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    const originalStock = Number(original.stockLevel);\r",
+							"    const expectedStock = originalStock + delta;\r",
+							"\r",
+							"    console.log(\"Original stockLevel:\", originalStock);\r",
+							"    console.log(\"Delta (Quantity) from request:\", delta);\r",
+							"    console.log(\"Expected stockLevel:\", expectedStock);\r",
+							"    console.log(\"Updated stockLevel:\", updated.stockLevel);\r",
+							"\r",
+							"    // 3) Assert\r",
+							"    pm.expect(\r",
+							"        updated.stockLevel,\r",
+							"        `stockLevel should be original (${originalStock}) + Quantity (${delta})`\r",
+							"    ).to.eql(expectedStock);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Quantity\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7088/api/Product/{{CreatedProductId}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7088",
+					"path": [
+						"api",
+						"Product",
+						"{{CreatedProductId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Delete product",
 			"event": [
 				{
@@ -376,7 +547,7 @@
 			"response": []
 		},
 		{
-			"name": "Check Deleted entity",
+			"name": "Check Deleted entity - NegativTest",
 			"event": [
 				{
 					"listen": "test",
@@ -427,6 +598,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "OriginalProduct",
+			"value": ""
 		}
 	]
 }

@@ -210,4 +210,4 @@ jobs:
 
       # 🧪 Kør Postman collection
       - name: Run Postman tests
-        run:  newman run Postman/Madkassen.postman_collection.json --insecure
+        run: newman run Postman/Madkassen.postman_collection_Final.json --insecure
