@@ -268,4 +268,5 @@ namespace MadkassenRestAPI.Controllers
             return BCrypt.Net.BCrypt.Verify(password, hash);
         }
     }
+    
 }
