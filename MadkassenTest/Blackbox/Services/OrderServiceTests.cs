@@ -81,16 +81,11 @@ namespace MadkassenTest.Blackbox.Services
         }
 
         [Theory]
-        // TC1: No cart items → expect exception
-        [InlineData(false, true, true, true)] // HasCartItems=false
-        // TC2: Normal order
-        [InlineData(true, true, true, true)] // expectException=false
-        // TC3: Missing product
-        [InlineData(true, false, true, true)] // ProductExists=false → expect exception
-        // TC4: Negative or zero quantity
-        [InlineData(true, true, false, true)] // QuantityPositive=false → order created, total may be negative
-        // TC5: Negative or zero price
-        [InlineData(true, true, true, false)] // PricePositive=false → order created, total may be negative
+        [InlineData(false, true, true, true)]
+        [InlineData(true, true, true, true)]
+        [InlineData(true, false, true, true)]
+        [InlineData(true, true, false, true)] //quantity
+        [InlineData(true, true, true, false)] //price
         public async Task CreateOrder_DecisionTableTests(
             bool hasCartItems,
             bool productExists,
