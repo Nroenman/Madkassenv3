@@ -4,7 +4,7 @@
 		"name": "Madkassen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33111835",
-		"_collection_link": "https://blue-shadow-458662.postman.co/workspace/486d218b-8afb-45bf-8312-911cf21fc74a/collection/33111835-e0c88d51-c091-47d2-ac6e-a6f42e25b887?action=share&source=collection_link&creator=33111835"
+		"_collection_link": "https://blue-shadow-458662.postman.co/workspace/Team-Workspace~486d218b-8afb-45bf-8312-911cf21fc74a/collection/33111835-e0c88d51-c091-47d2-ac6e-a6f42e25b887?action=share&source=collection_link&creator=33111835"
 	},
 	"item": [
 		{
@@ -69,9 +69,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product",
+					"raw": "https://localhost:7088/api/Product",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Product"
+						"localhost"
+					],
+					"port": "7088",
+					"path": [
+						"api",
+						"Product"
 					]
 				}
 			},
@@ -105,7 +111,7 @@
 							"});\r",
 							"\r",
 							"if (json.token) {\r",
-							"    pm.environment.set(\"Token\", json.token);\r",
+							"    pm.globals.set(\"Token\", json.token);\r",
 							"    console.log(\"Global variable 'Token' saved:\", json.token);\r",
 							"} else {\r",
 							"    console.log(\"Token not found in response:\", json);\r",
@@ -131,9 +137,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Auth",
+					"raw": "https://localhost:7088/api/Auth",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Auth"
+						"localhost"
+					],
+					"port": "7088",
+					"path": [
+						"api",
+						"Auth"
 					]
 				}
 			},
@@ -166,10 +178,10 @@
 							"    pm.expect(json).to.have.property(\"roles\");\r",
 							"});\r",
 							"\r",
-							"pm.environment.set(\"LoginEmail\", json.email);\r",
+							"pm.globals.set(\"LoginEmail\", json.email);\r",
 							"\r",
 							"pm.test(\"Profile email matches logged-in user\", function () {\r",
-							"    const expectedEmail = pm.environment.get(\"LoginEmail\");\r",
+							"    const expectedEmail = pm.globals.get(\"LoginEmail\");\r",
 							"    if (expectedEmail) {\r",
 							"        pm.expect(json.email).to.eql(expectedEmail);\r",
 							"    }\r",
@@ -195,11 +207,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}Users/profile",
+					"raw": "https://localhost:7088/api/Users/profile",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Users"
+						"localhost"
 					],
+					"port": "7088",
 					"path": [
+						"api",
+						"Users",
 						"profile"
 					]
 				}
@@ -253,7 +269,7 @@
 							"    pm.expect(json.stockLevel).to.eql(reqBody.stockLevel);\r",
 							"});\r",
 							"\r",
-							"pm.environment.set(\"CreatedProductId\", json.productId);"
+							"pm.globals.set(\"CreatedProductId\", json.productId);"
 						],
 						"type": "text/javascript",
 						"packages": {},
@@ -284,9 +300,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product",
+					"raw": "https://localhost:7088/api/Product",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Product"
+						"localhost"
+					],
+					"port": "7088",
+					"path": [
+						"api",
+						"Product"
 					]
 				}
 			},
@@ -332,14 +354,14 @@
 							"\r",
 							"pm.test(\"productId in response matches CreatedProductId\", function () {\r",
 							"    const body = pm.response.json();\r",
-							"    const idFromVar = pm.environment.get(\"CreatedProductId\")  \r",
+							"    const idFromVar = pm.globals.get(\"CreatedProductId\")  \r",
 							"\r",
 							"    pm.expect(body.productId.toString()).to.eql(idFromVar.toString());\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Save original product for later comparison\", function () {\r",
 							"    const original = pm.response.json();\r",
-							"    pm.environment.set(\"OriginalProduct\", JSON.stringify(original));\r",
+							"    pm.globals.set(\"OriginalProduct\", JSON.stringify(original));\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -352,11 +374,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "https://localhost:7088/api/Product/{{CreatedProductId}}",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Product"
+						"localhost"
 					],
+					"port": "7088",
 					"path": [
+						"api",
+						"Product",
 						"{{CreatedProductId}}"
 					]
 				}
@@ -380,7 +406,7 @@
 							"});\r",
 							"\r",
 							"pm.test(\"ID in URL matches ID in response\", function () {\r",
-							"     const idFromUrl = pm.environment.get(\"CreatedProductId\");\r",
+							"     const idFromUrl = pm.globals.get(\"CreatedProductId\");\r",
 							"     const res = pm.response.json();\r",
 							"\r",
 							"    pm.expect(res.productId.toString()).to.equal(idFromUrl.toString());\r",
@@ -390,7 +416,7 @@
 							"    const updated = pm.response.json();\r",
 							"\r",
 							"    // 1) Hent original produkt (fra GET før PUT)\r",
-							"    const originalRaw = pm.environment.get(\"OriginalProduct\");\r",
+							"    const originalRaw = pm.globals.get(\"OriginalProduct\");\r",
 							"    pm.expect(originalRaw, \"Original product is missing\").to.not.be.undefined;\r",
 							"\r",
 							"    const original = JSON.parse(originalRaw);\r",
@@ -444,11 +470,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "https://localhost:7088/api/Product/{{CreatedProductId}}",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Product"
+						"localhost"
 					],
+					"port": "7088",
 					"path": [
+						"api",
+						"Product",
 						"{{CreatedProductId}}"
 					]
 				}
@@ -501,11 +531,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "https://localhost:7088/api/Product/{{CreatedProductId}}",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Product"
+						"localhost"
 					],
+					"port": "7088",
 					"path": [
+						"api",
+						"Product",
 						"{{CreatedProductId}}"
 					]
 				}
@@ -538,7 +572,7 @@
 							"});\r",
 							"\r",
 							"\r",
-							"pm.environment.unset(\"CreatedProductId\");"
+							"pm.globals.unset(\"CreatedProductId\");"
 						],
 						"type": "text/javascript",
 						"packages": {},
@@ -550,11 +584,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}Product/{{CreatedProductId}}",
+					"raw": "https://localhost:7088/api/Product/{{CreatedProductId}}",
+					"protocol": "https",
 					"host": [
-						"{{BaseUrl}}Product"
+						"localhost"
 					],
+					"port": "7088",
 					"path": [
+						"api",
+						"Product",
 						"{{CreatedProductId}}"
 					]
 				}
