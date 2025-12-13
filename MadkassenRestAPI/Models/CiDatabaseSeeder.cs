@@ -138,29 +138,6 @@ namespace MadkassenRestAPI.Models
 
                 ctx.SaveChanges();
             }
-            if (!ctx.Users.Any(x => x.Email.StartsWith("testuser")))
-            {
-                var now = DateTime.UtcNow;
-                const string plainPassword = "TestPassword123!";
-
-                for (int i = 1; i <= 100; i++)
-                {
-                    var email = $"testuser{i:D3}@test.dk";
-                    var hashedPassword = BCrypt.Net.BCrypt.HashPassword(plainPassword);
-
-                    ctx.Users.Add(new Users
-                    {
-                        UserName = $"Test User {i}",
-                        Email = email,
-                        PasswordHash = hashedPassword,
-                        CreatedAt = now,
-                        UpdatedAt = now,
-                        Roles = "User"
-                    });
-                }
-
-                ctx.SaveChanges();
-            }
         }
     }
 }
