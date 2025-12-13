@@ -98,15 +98,16 @@ builder.Services.AddAuthentication("Bearer")
 
 var app = builder.Build();
 
-// ---- CI SEEDING START ----
-if (app.Environment.EnvironmentName == "CI")
+if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName == "CI")
 {
     using var scope = app.Services.CreateScope();
     var ctx = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    ctx.Database.EnsureCreated();          // create ci_test.db if missing
-    CiDatabaseSeeder.Seed(ctx);            // you'll create this class
+
+    if (app.Environment.EnvironmentName == "CI")
+        ctx.Database.EnsureCreated();
+
+    CiDatabaseSeeder.Seed(ctx);
 }
-// ---- CI SEEDING END ----
 
 if (app.Environment.IsDevelopment())
 {
