@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/stresstest/loginstres.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stresstest/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/.last-run.json" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/.last-run.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/user-can-sort-by-catogory.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/user-can-sort-by-catogory.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
@@ -54,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "StressTest",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/nikol/RiderProjects/Madkassenv2/madkassenweb",
     "node.js.detected.package.eslint": "true",
