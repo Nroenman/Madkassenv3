@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/stresstest/product-stresstest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stresstest/loginstres.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/loginstres.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stresstest/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/users.json" afterDir="false" />
-    </list>
+    <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "StressTest",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/nikol/RiderProjects/Madkassenv2/madkassenweb",
     "node.js.detected.package.eslint": "true",

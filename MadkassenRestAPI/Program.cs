@@ -119,13 +119,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowAll");
+app.UseCors("AllowAll");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Use authentication middleware before authorization middleware
-app.UseAuthentication();
-app.UseAuthorization();
-
+app.MapControllers();
 app.MapControllers();
 
 app.Run();
