@@ -1,0 +1,1 @@
+cRMC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\ClassLibrary.csproj¢net9.0òCSharp13

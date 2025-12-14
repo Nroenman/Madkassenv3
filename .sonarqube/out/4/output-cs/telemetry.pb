@@ -1,0 +1,1 @@
+kRUC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\MadkassenRestAPI.csproj¢net9.0òCSharp13

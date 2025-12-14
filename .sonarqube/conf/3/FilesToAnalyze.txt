@@ -1,0 +1,13 @@
+﻿C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\AddToCartRequest.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\CartItemDTO.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateCartRequest.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateStockRequest.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\CartItem.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\Kategori.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\Order.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\OrderItem.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\ProductSummary.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\Produkter.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\UpdateUserProfileRequest.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\UserProfile.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\Users.cs
