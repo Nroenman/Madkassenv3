@@ -1,1 +1,1 @@
-eROC:\Users\harun\soft-1\test-soft\backend-man2\UnitTestOrder\UnitTestOrder.csproj¢net9.0òCSharp13
+eROC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\MadkassenTest.csproj¢net9.0òCSharp13

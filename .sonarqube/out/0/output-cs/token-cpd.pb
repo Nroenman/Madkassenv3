@@ -1064,47 +1064,7 @@ SC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateStockReques
 set "
 ;" #
 }$ %
-} Ø
-QC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\AddToCartRequest.cs
-	namespace 	
-ClassLibrary
- 
-{ 
-public 
-
-class 
-AddToCartRequest !
-{ 
-public 
-int 
-	ProductId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-int 
-? 
-UserId 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-public 
-int 
-Quantity 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-} 
-}		 Ô
+} Ô
 RC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateCartRequest.cs
 	namespace 	
 ClassLibrary
@@ -1210,4 +1170,44 @@ LC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\CartItemDTO.cs
 }
 
  
-} 
+} Ø
+QC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\AddToCartRequest.cs
+	namespace 	
+ClassLibrary
+ 
+{ 
+public 
+
+class 
+AddToCartRequest !
+{ 
+public 
+int 
+	ProductId 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public 
+int 
+? 
+UserId 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+public 
+int 
+Quantity 
+{ 
+get !
+;! "
+set# &
+;& '
+}( )
+} 
+}		 

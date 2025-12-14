@@ -1,5 +1,4 @@
-
-tC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\MadkassenRestAPI.RazorAssemblyInfo.csutf-8Ž
+Ž
 ‚C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\MadkassenRestAPI.MvcApplicationPartsAssemblyInfo.csutf-8z
 oC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\MadkassenRestAPI.AssemblyInfo.csutf-8ˆ
 }C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.csutf-8|
@@ -13,12 +12,14 @@ UC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Services\CartServ
 \C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Repositories\UserRepository.csutf-8f
 ]C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Repositories\IUserRepository.csutf-8Q
 HC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Program.csutf-8U
-LC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\User.csutf-8e
+LC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\User.csutf-8a
+XC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\CiDatabaseSeeder.csutf-8e
 \C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\ApplicationDbContext.csutf-8b
 YC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Middleware\JwtMiddleware.csutf-8e
 \C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\UsersController.csutf-8g
 ^C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\ProductController.csutf-8e
-\C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\OrderController.csutf-8d
-[C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\CartController.csutf-8h
+\C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\OrderController.csutf-8f
+]C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\HealthController.csutf-8h
 _C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\CategoryController.csutf-8d
+[C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\CartController.csutf-8d
 [C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\AuthController.csutf-8

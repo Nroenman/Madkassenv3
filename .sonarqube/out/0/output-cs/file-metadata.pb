@@ -11,7 +11,7 @@ LC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\OrderItem.csu
 HC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\Order.csutf-8T
 KC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\Kategori.csutf-8T
 KC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\Model\CartItem.csutf-8\
-SC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateStockRequest.csutf-8Z
-QC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\AddToCartRequest.csutf-8[
+SC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateStockRequest.csutf-8[
 RC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\UpdateCartRequest.csutf-8U
-LC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\CartItemDTO.csutf-8
+LC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\CartItemDTO.csutf-8Z
+QC:\Users\harun\soft-1\test-soft\backend-man2\ClassLibrary\DTO\AddToCartRequest.csutf-8

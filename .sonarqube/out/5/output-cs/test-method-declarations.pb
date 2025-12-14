@@ -1,3 +1,91 @@
-û
-GC:\Users\harun\soft-1\test-soft\backend-man2\UnitTestOrder\UnitTest1.csUnitTestOrderD
-UnitTest.OrderServiceTests&CreateOrderAsync_ReturnsCorrectOrderId
+Ô
+OC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Whitebox\UserTest.csMadkassenTestH
+MadkassenTest.Whitebox.UserTest%Authenticate_UserNotFound_ReturnsNullI
+MadkassenTest.Whitebox.UserTest&Authenticate_WrongPassword_ReturnsNullL
+MadkassenTest.Whitebox.UserTest)Authenticate_ValidCredentials_ReturnsUserJ
+MadkassenTest.Whitebox.UserTest'GetUserFromJwtToken_InvalidToken_ThrowsH
+MadkassenTest.Whitebox.UserTest%GetUserFromJwtToken_NoSubClaim_ThrowsJ
+MadkassenTest.Whitebox.UserTest'GetUserFromJwtToken_UserNotFound_ThrowsH
+MadkassenTest.Whitebox.UserTest%GetUserFromJwtToken_Valid_ReturnsUser’
+`C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Whitebox\ReservationExpirationTest.csMadkassenTestv
+7MadkassenTest.Whitebox.ReservationExpirationServiceTest;PerformExpirationLogic_ExpiredItems_RemovedAndStockRestoredj
+7MadkassenTest.Whitebox.ReservationExpirationServiceTest/PerformExpirationLogic_NoExpiredItems_NoChanges~
+7MadkassenTest.Whitebox.ReservationExpirationServiceTestCPerformExpirationLogic_MixedExpiredAndNonExpired_OnlyExpiredRemoved©
+RC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Whitebox\ProductTest.csMadkassenTestE
+"MadkassenTest.Whitebox.ProductTestGetproductbyidWhereIdExistAsyncC
+"MadkassenTest.Whitebox.ProductTestGetproductbyidWhereIdNotExist5
+"MadkassenTest.Whitebox.ProductTestAddProductAsync@
+"MadkassenTest.Whitebox.ProductTestAddProductAlredyExistAsync=
+"MadkassenTest.Whitebox.ProductTestAddProductWithNullAsync=
+"MadkassenTest.Whitebox.ProductTestUpdateProductStockAsync=
+"MadkassenTest.Whitebox.ProductTestUpdateProductStockwith0@
+"MadkassenTest.Whitebox.ProductTestUpdateProductStockwithnull@
+"MadkassenTest.Whitebox.ProductTestGetProductsByCategoryAsyncﬂ
+OC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Whitebox\CartTest.csMadkassenTestc
+MadkassenTest.Whitebox.CartTest@AddToCartAsync_WhenNoExistingCartItem_AddsNewItemAndReducesStocke
+MadkassenTest.Whitebox.CartTestBAddToCartAsync_WhenExistingCartItem_UpdatesQuantityAndReducesStockd
+MadkassenTest.Whitebox.CartTestAAddToCartAsync_WhenNotEnoughStock_ThrowsInvalidOperationExceptionb
+MadkassenTest.Whitebox.CartTest?UpdateCartItemAsync_IncreaseQuantity_UpdatesCartAndReducesStockd
+MadkassenTest.Whitebox.CartTestAUpdateCartItemAsync_DecreaseQuantity_UpdatesCartAndIncreasesStocki
+MadkassenTest.Whitebox.CartTestFUpdateCartItemAsync_WhenNotEnoughStock_ThrowsInvalidOperationExceptionk
+MadkassenTest.Whitebox.CartTestHUpdateCartItemAsync_WhenCartItemNotFound_ThrowsInvalidOperationExceptiona
+MadkassenTest.Whitebox.CartTest>RemoveCartItemAsync_WhenItemExists_RemovesItemAndRestoresStockk
+MadkassenTest.Whitebox.CartTestHRemoveCartItemAsync_WhenCartItemNotFound_ThrowsInvalidOperationExceptionY
+MadkassenTest.Whitebox.CartTest6GetCartItemsByUserIdAsync_ReturnsCartItemsForGivenUserü
+`C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Integration\ProductControllerTests.csMadkassenTestX
+0MadkassenTest.Integration.ProductControllerTests$GetAllProducts_ReturnsOKWithProductsZ
+0MadkassenTest.Integration.ProductControllerTests&AddProduct_ValidRequest_ReturnsCreated_
+0MadkassenTest.Integration.ProductControllerTests+AddProduct_InvalidToken_ReturnsUnauthorizedX
+0MadkassenTest.Integration.ProductControllerTests$GetProduct_ExistingProduct_ReturnsOk\
+0MadkassenTest.Integration.ProductControllerTests(GetProduct_NonExistentId_ReturnsNotFound]
+0MadkassenTest.Integration.ProductControllerTests)UpdateProductStock_ValidRequest_ReturnsOkÅ
+aC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Integration\CategoryControllerTests.csMadkassenTest\
+1MadkassenTest.Integration.CategoryControllerTests'GetAllCategories_ReturnsOkAndCategoriesU
+1MadkassenTest.Integration.CategoryControllerTests GetCategory_ReturnsOkAndCategoryX
+1MadkassenTest.Integration.CategoryControllerTests#PostCategory_ReturnsCreatedCategory„
+]C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Integration\CartControllerTests.csMadkassenTestQ
+-MadkassenTest.Integration.CartControllerTests AddToCart_ValidRequest_ReturnsOk\
+-MadkassenTest.Integration.CartControllerTests+AddToCart_InvalidQuantity_ReturnsBadRequest[
+-MadkassenTest.Integration.CartControllerTests*AddToCart_NotEnoughStock_ReturnsBadRequest[
+-MadkassenTest.Integration.CartControllerTests*GetCartItems_ExistingCart_ReturnsCartItemsX
+-MadkassenTest.Integration.CartControllerTests'GetCartItems_EmptyCart_ReturnsEmptyListV
+-MadkassenTest.Integration.CartControllerTests%UpdateCartItem_ValidRequest_ReturnsOkV
+-MadkassenTest.Integration.CartControllerTests%RemoveCartItem_ValidRequest_ReturnsOk©
+^C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Integration\AuthControllerTests..csMadkassenTestY
+-MadkassenTest.Integration.AuthControllerTests(Login_ValidCredentials_ReturnsOkAndToken]
+-MadkassenTest.Integration.AuthControllerTests,Login_InvalidCredentials_ReturnsUnauthorized¸
+`C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Blackbox\Services\UserServiceTests.csMadkassenTest^
+0MadkassenTest.Blackbox.Services.UserServiceTests*Authenticate_EmailDoesNotExist_ReturnsNullZ
+0MadkassenTest.Blackbox.Services.UserServiceTests&Authenticate_WrongPassword_ReturnsNull]
+0MadkassenTest.Blackbox.Services.UserServiceTests)Authenticate_ValidCredentials_ReturnsUser[
+0MadkassenTest.Blackbox.Services.UserServiceTests'GetUserFromJwtToken_InvalidToken_ThrowsY
+0MadkassenTest.Blackbox.Services.UserServiceTests%GetUserFromJwtToken_NoSubClaim_Throws[
+0MadkassenTest.Blackbox.Services.UserServiceTests'GetUserFromJwtToken_UserNotFound_ThrowsY
+0MadkassenTest.Blackbox.Services.UserServiceTests%GetUserFromJwtToken_Valid_ReturnsUserÍ
+cC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Blackbox\Services\ProductServiceTests.csMadkassenTest^
+3MadkassenTest.Blackbox.Services.ProductServiceTests'UpdateStock_ProductNotFound_ReturnsNullb
+3MadkassenTest.Blackbox.Services.ProductServiceTests+UpdateStock_PositiveQuantity_IncreasesStockX
+3MadkassenTest.Blackbox.Services.ProductServiceTests!UpdateStock_ZeroQuantity_NoChangen
+3MadkassenTest.Blackbox.Services.ProductServiceTests7UpdateStock_NegativeQuantity_EnoughStock_DecreasesStockn
+3MadkassenTest.Blackbox.Services.ProductServiceTests7UpdateStock_NegativeQuantity_NotEnoughStock_ReturnsNullv
+3MadkassenTest.Blackbox.Services.ProductServiceTests?UpdateStock_NegativeQuantity_ExactlyEnoughStock_SetsStockToZerop
+3MadkassenTest.Blackbox.Services.ProductServiceTests9AddProductAsync_ProductIsNull_ThrowsArgumentNullExceptionx
+3MadkassenTest.Blackbox.Services.ProductServiceTestsAAddProductAsync_ProductNameExists_ThrowsInvalidOperationExceptionh
+3MadkassenTest.Blackbox.Services.ProductServiceTests1AddProductAsync_ValidUniqueProduct_ReturnsProductf
+3MadkassenTest.Blackbox.Services.ProductServiceTests/GetAllProductsAsync_NoProducts_ReturnsEmptyListj
+3MadkassenTest.Blackbox.Services.ProductServiceTests3GetAllProductsAsync_WithProducts_ReturnsAllProductsg
+3MadkassenTest.Blackbox.Services.ProductServiceTests0GetProductByIdAsync_ProductExists_ReturnsProductj
+3MadkassenTest.Blackbox.Services.ProductServiceTests3GetProductByIdAsync_ProductDoesNotExist_ReturnsNullw
+3MadkassenTest.Blackbox.Services.ProductServiceTests@GetProductsByCategoryAsync_NoProductsInCategory_ReturnsEmptyListÖ
+3MadkassenTest.Blackbox.Services.ProductServiceTestsNGetProductsByCategoryAsync_ProductsInCategory_ReturnsOnlyCategorySortedByPriceú
+aC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Blackbox\Services\OrderServiceTests.csMadkassenTestS
+1MadkassenTest.Blackbox.Services.OrderServiceTestsCreateOrder_BoundaryValueTestsS
+1MadkassenTest.Blackbox.Services.OrderServiceTestsCreateOrder_DecisionTableTestsá
+`C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Blackbox\Services\CartServiceTests.csMadkassenTestU
+0MadkassenTest.Blackbox.Services.CartServiceTests!AddToCartAsync_DecisionTableTestsZ
+0MadkassenTest.Blackbox.Services.CartServiceTests&UpdateCartItemAsync_DecisionTableTestsa
+0MadkassenTest.Blackbox.Services.CartServiceTests-RemoveCartItemAsync_EquivalencePartitionTests∞
+PC:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\Whitebox\OrderTest.csMadkassenTest4
+ MadkassenTest.Whitebox.OrderTestCreateOrderAsync=
+ MadkassenTest.Whitebox.OrderTestGetTopProductsByUserAsyncX
+ MadkassenTest.Whitebox.OrderTest4GetTopProductsOverallAsync_ReturnsCorrectTopProducts

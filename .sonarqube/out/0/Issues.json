@@ -14,40 +14,6 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'OrderStatus' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 23,
-                  "endLine": 8,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 23,
-                  "endLine": 8,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
           "message": "Non-nullable property 'ProductName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
@@ -82,29 +48,63 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "message": "Non-nullable property 'UserName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 8,
+                  "endLine": 24,
+                  "endColumn": 13
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 16,
+                  "endLine": 10,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 8,
+                  "endLine": 24,
+                  "endColumn": 13
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
                 "region": {
                   "startLine": 12,
-                  "startColumn": 22,
+                  "startColumn": 16,
                   "endLine": 12,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 22,
-                  "endLine": 12,
-                  "endColumn": 27
+                  "endColumn": 21
                 }
               }
             }
@@ -116,16 +116,16 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'OrderItems' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "message": "Non-nullable property 'PasswordHash' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
                 "region": {
-                  "startLine": 15,
-                  "startColumn": 39,
-                  "endLine": 15,
-                  "endColumn": 49
+                  "startLine": 24,
+                  "startColumn": 8,
+                  "endLine": 24,
+                  "endColumn": 13
                 }
               }
             }
@@ -133,148 +133,12 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
                 "region": {
-                  "startLine": 15,
-                  "startColumn": 39,
-                  "endLine": 15,
-                  "endColumn": 49
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'ProductName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 19,
-                  "endLine": 7,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 19,
-                  "endLine": 7,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'ImageUrl' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 19,
-                  "endLine": 9,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 19,
-                  "endLine": 9,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'UserId' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 19,
-                  "endLine": 5,
-                  "endColumn": 25
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 19,
-                  "endLine": 5,
-                  "endColumn": 25
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Role' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 19,
-                  "endLine": 6,
-                  "endColumn": 23
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 19,
-                  "endLine": 6,
-                  "endColumn": 23
+                  "startLine": 14,
+                  "startColumn": 16,
+                  "endLine": 14,
+                  "endColumn": 28
                 }
               }
             }
@@ -342,6 +206,74 @@
                   "startLine": 16,
                   "startColumn": 18,
                   "endLine": 16,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'UserId' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Role' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/UserProfile.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
                   "endColumn": 23
                 }
               }
@@ -490,6 +422,176 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
+          "message": "Non-nullable property 'OrderStatus' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 22,
+                  "endLine": 12,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 22,
+                  "endLine": 12,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'OrderItems' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 39,
+                  "endLine": 15,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Order.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 39,
+                  "endLine": 15,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ProductName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ImageUrl' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/ProductSummary.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
           "message": "Non-nullable property 'ProductName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
@@ -581,108 +683,6 @@
                   "startColumn": 26,
                   "endLine": 15,
                   "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'UserName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 8,
-                  "endLine": 24,
-                  "endColumn": 13
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 16,
-                  "endLine": 10,
-                  "endColumn": 24
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 8,
-                  "endLine": 24,
-                  "endColumn": 13
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 16,
-                  "endLine": 12,
-                  "endColumn": 21
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'PasswordHash' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 8,
-                  "endLine": 24,
-                  "endColumn": 13
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/ClassLibrary/Model/Users.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 16,
-                  "endLine": 14,
-                  "endColumn": 28
                 }
               }
             }

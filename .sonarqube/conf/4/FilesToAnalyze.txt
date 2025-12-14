@@ -1,11 +1,13 @@
 ﻿C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\AuthController.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\CartController.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\CategoryController.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\HealthController.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\OrderController.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\ProductController.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Controllers\UsersController.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Middleware\JwtMiddleware.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\ApplicationDbContext.cs
+C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\CiDatabaseSeeder.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Models\User.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Program.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\Repositories\IUserRepository.cs
@@ -20,7 +22,6 @@ C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\M
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\MadkassenRestAPI.AssemblyInfo.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\MadkassenRestAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\obj\Debug\net9.0\MadkassenRestAPI.RazorAssemblyInfo.cs
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\appsettings.Development.json
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\appsettings.json
 C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenRestAPI\package-lock.json
