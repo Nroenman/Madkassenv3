@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="772d0376-aaff-4e11-b4b1-6a316259c286" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/stresstest/product-stress-load.k6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stresstest/product-stress-spike.k6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stresstest/register-load.k6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stresstest/register-spike.k6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stresstest/loginspike.k6.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/loginspike.k6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stresstest/product-stress-load.k6.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/product-stress-load.k6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stresstest/product-stress-spike.k6.js" beforeDir="false" afterPath="$PROJECT_DIR$/stresstest/product-stress-spike.k6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +102,7 @@
       <workItem from="1764630388412" duration="3050000" />
       <workItem from="1765654681955" duration="358000" />
       <workItem from="1765659492697" duration="5708000" />
+      <workItem from="1765709768387" duration="4212000" />
     </task>
     <servers />
   </component>
