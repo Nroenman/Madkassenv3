@@ -4,15 +4,15 @@ import { check, sleep } from "k6";
 
 export const options = {
     stages: [
-        { duration: "30s", target: 20 },   // baseline traffic
-        { duration: "5s",  target: 600 },  // 🚨 sudden spike
-        { duration: "20s", target: 600 },  // short peak
-        { duration: "5s",  target: 20 },   // fast recovery
-        { duration: "30s", target: 0 },    // cool down
+        { duration: "30s", target: 20 },
+        { duration: "5s",  target: 600 },
+        { duration: "20s", target: 600 },
+        { duration: "5s",  target: 20 },
+        { duration: "30s", target: 0 },
     ],
     thresholds: {
         http_req_failed: ["rate<0.02"],
-        http_req_duration: ["p(95)<500"],  // may fail under spike (that’s OK)
+        http_req_duration: ["p(95)<500"],
     },
 };
 
