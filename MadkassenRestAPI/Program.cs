@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -20,6 +21,7 @@ builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<ReservationExpirationService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddHttpClient<WeatherService>(); 
 
 // ---- DB CONFIG START ----
 var envName = builder.Environment.EnvironmentName;
@@ -97,6 +99,7 @@ builder.Services.AddAuthentication("Bearer")
     });
 
 var app = builder.Build();
+
 
 // ---- CI SEEDING START ----
 if (app.Environment.EnvironmentName == "CI")
