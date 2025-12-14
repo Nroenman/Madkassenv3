@@ -1,0 +1,6 @@
+projectKey=MadkassenTest
+serverUrl=http://localhost:9000
+serverVersion=25.11.0.114957
+dashboardUrl=http://localhost:9000/dashboard?id=MadkassenTest
+ceTaskId=d0ee9054-497d-4c53-8d53-fd3cd5b11b40
+ceTaskUrl=http://localhost:9000/api/ce/task?id=d0ee9054-497d-4c53-8d53-fd3cd5b11b40
