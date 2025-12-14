@@ -132,7 +132,7 @@ namespace MadkassenTest.Whitebox
                 allergies: false,
                 allergyType: null,
                 price: 9m,
-                stockLevel: 2,   // less than quantityToAdd
+                stockLevel: 2,   
                 imageUrl: "fanta.png"
             );
 
@@ -141,13 +141,14 @@ namespace MadkassenTest.Whitebox
 
             var service = new CartService(context);
 
-            // Act + Assert
+            // Act
+            var cartItem = await context.CartItems
+                .FirstOrDefaultAsync(ci => ci.ProductId == productId && ci.UserId == userId);
+
+            //Assert
             await Assert.ThrowsAsync<InvalidOperationException>(
                 () => service.AddToCartAsync(productId, userId, quantityToAdd));
 
-            // Ensure nothing was added to cart and stock not changed
-            var cartItem = await context.CartItems
-                .FirstOrDefaultAsync(ci => ci.ProductId == productId && ci.UserId == userId);
             Assert.Null(cartItem);
 
             var unchangedProduct = await context.Produkter.FindAsync(productId);
@@ -292,8 +293,6 @@ namespace MadkassenTest.Whitebox
             var service = new CartService(context);
             int newQuantity = 5; // 2 -> 5 (needs +3)
 
-            // stockAdjustment = 2 - 5 = -3
-            // new stock = 1 + (-3) = -2 < 0 → should throw
 
             // Act + Assert
             await Assert.ThrowsAsync<InvalidOperationException>(
@@ -353,7 +352,7 @@ namespace MadkassenTest.Whitebox
                 allergies: false,
                 allergyType: null,
                 price: 10m,
-                stockLevel: 5,          // current stock
+                stockLevel: 5,         
                 imageUrl: "cola.png"
             );
 
@@ -363,7 +362,7 @@ namespace MadkassenTest.Whitebox
             {
                 ProductId = productId,
                 UserId = userId,
-                Quantity = 3,           // this should be added back to stock
+                Quantity = 3,        
                 AddedAt = DateTime.UtcNow,
                 ExpirationTime = DateTime.UtcNow.AddMinutes(30)
             };
@@ -412,11 +411,10 @@ namespace MadkassenTest.Whitebox
 
             var service = new CartService(context);
 
-            // Act + Assert
+
             await Assert.ThrowsAsync<InvalidOperationException>(
                 () => service.RemoveCartItemAsync(productId, userId));
 
-            // Ensure product stock unchanged
             var unchangedProduct = await context.Produkter.FindAsync(productId);
             Assert.Equal(7, unchangedProduct.StockLevel);
         }
@@ -477,7 +475,7 @@ namespace MadkassenTest.Whitebox
                 new CartItem
                 {
                     ProductId = product2.ProductId,
-                    UserId = otherUserId, // should NOT be returned
+                    UserId = otherUserId, 
                     Quantity = 5,
                     AddedAt = DateTime.UtcNow,
                     ExpirationTime = DateTime.UtcNow.AddMinutes(30),
@@ -492,24 +490,27 @@ namespace MadkassenTest.Whitebox
             // Act
             var result = await service.GetCartItemsByUserIdAsync(userId);
 
-            // Assert
-            Assert.NotNull(result);
-            Assert.Equal(2, result.Count); // only items for userId = 1
-
             // Sort by ProductId for predictable assertions
             var ordered = result.OrderBy(r => r.ProductId).ToList();
 
             var item1 = ordered[0];
             var item2 = ordered[1];
 
-            // First item -> Cola
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(2, result.Count); // only items for userId = 1
+
+           
+           
+
+            // First item = Cola
             Assert.Equal(product1.ProductId, item1.ProductId);
             Assert.Equal(userId, item1.UserId);
             Assert.Equal(2, item1.Quantity);
             Assert.Equal("Cola", item1.ProductName);
             Assert.Equal(10m, item1.Price);
 
-            // Second item -> Pepsi
+            // Second item = Pepsi
             Assert.Equal(product2.ProductId, item2.ProductId);
             Assert.Equal(userId, item2.UserId);
             Assert.Equal(3, item2.Quantity);
