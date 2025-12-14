@@ -308,6 +308,27 @@
           "locations": [
             {
               "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/ProductService.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 20,
+                  "endLine": 19,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/UserService.cs",
                 "region": {
                   "startLine": 24,
@@ -331,9 +352,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/ProductService.cs",
                 "region": {
-                  "startLine": 19,
+                  "startLine": 48,
                   "startColumn": 20,
-                  "endLine": 19,
+                  "endLine": 48,
                   "endColumn": 24
                 }
               }
@@ -344,18 +365,18 @@
           }
         },
         {
-          "ruleId": "CS8604",
+          "ruleId": "CS8603",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'byte[] Encoding.GetBytes(string s)'.",
+          "message": "Possible null reference return.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/ProductService.cs",
                 "region": {
-                  "startLine": 17,
-                  "startColumn": 55,
-                  "endLine": 17,
-                  "endColumn": 89
+                  "startLine": 53,
+                  "startColumn": 20,
+                  "endLine": 53,
+                  "endColumn": 24
                 }
               }
             }
@@ -377,27 +398,6 @@
                   "startColumn": 27,
                   "endLine": 47,
                   "endColumn": 51
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8601",
-          "level": "warning",
-          "message": "Possible null reference assignment.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/CartService.cs",
-                "region": {
-                  "startLine": 136,
-                  "startColumn": 31,
-                  "endLine": 136,
-                  "endColumn": 55
                 }
               }
             }
@@ -470,39 +470,18 @@
           }
         },
         {
-          "ruleId": "CS8603",
+          "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference return.",
+          "message": "Possible null reference argument for parameter 's' in 'byte[] Encoding.GetBytes(string s)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/ProductService.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
                 "region": {
-                  "startLine": 48,
-                  "startColumn": 20,
-                  "endLine": 48,
-                  "endColumn": 24
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8603",
-          "level": "warning",
-          "message": "Possible null reference return.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/ProductService.cs",
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 20,
-                  "endLine": 53,
-                  "endColumn": 24
+                  "startLine": 17,
+                  "startColumn": 55,
+                  "endLine": 17,
+                  "endColumn": 89
                 }
               }
             }
@@ -518,12 +497,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/OrderService.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/CartService.cs",
                 "region": {
-                  "startLine": 72,
-                  "startColumn": 28,
-                  "endLine": 72,
-                  "endColumn": 46
+                  "startLine": 136,
+                  "startColumn": 31,
+                  "endLine": 136,
+                  "endColumn": 55
                 }
               }
             }
@@ -604,6 +583,27 @@
               "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/OrderService.cs",
                 "region": {
+                  "startLine": 72,
+                  "startColumn": 28,
+                  "endLine": 72,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Services/OrderService.cs",
+                "region": {
                   "startLine": 91,
                   "startColumn": 28,
                   "endLine": 91,
@@ -659,6 +659,27 @@
           }
         },
         {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Program.cs",
+                "region": {
+                  "startLine": 132,
+                  "startColumn": 22,
+                  "endLine": 132,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S2068",
           "level": "warning",
           "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
@@ -701,18 +722,91 @@
           }
         },
         {
-          "ruleId": "CA1050",
-          "level": "note",
-          "message": "Declare types in namespaces",
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'datetime2' 5 times.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/CartController.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Models/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 11,
-                  "startColumn": 14,
-                  "endLine": 11,
-                  "endColumn": 28
+                  "startLine": 90,
+                  "startColumn": 32,
+                  "endLine": 90,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Models/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 32,
+                  "endLine": 96,
+                  "endColumn": 43
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Models/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 131,
+                  "startColumn": 32,
+                  "endLine": 131,
+                  "endColumn": 43
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Models/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 137,
+                  "startColumn": 32,
+                  "endLine": 137,
+                  "endColumn": 43
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Models/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 167,
+                  "startColumn": 32,
+                  "endLine": 167,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field '_configuration'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 9,
+                  "endLine": 20,
+                  "endColumn": 85
                 }
               }
             }
@@ -734,6 +828,48 @@
                   "startColumn": 41,
                   "endLine": 10,
                   "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1050",
+          "level": "note",
+          "message": "Declare types in namespaces",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/CartController.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 14,
+                  "endLine": 11,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'CartController' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/CartController.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 14,
+                  "endLine": 11,
+                  "endColumn": 28
                 }
               }
             }
@@ -776,48 +912,6 @@
                   "startColumn": 14,
                   "endLine": 8,
                   "endColumn": 25
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1144",
-          "level": "warning",
-          "message": "Remove the unused private field '_configuration'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 19,
-                  "startColumn": 9,
-                  "endLine": 20,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S3903",
-          "level": "warning",
-          "message": "Move 'CartController' into a named namespace.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/CartController.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 14,
-                  "endLine": 11,
-                  "endColumn": 28
                 }
               }
             }
@@ -1058,6 +1152,43 @@
           }
         },
         {
+          "ruleId": "S6968",
+          "level": "warning",
+          "message": "Annotate this method with ProducesResponseType containing the return type for successful responses.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/HealthController.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 30,
+                  "endLine": 10,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/HealthController.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 39,
+                  "endLine": 10,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
           "ruleId": "S6667",
           "level": "warning",
           "message": "Logging in a catch clause should pass the caught exception as a parameter.",
@@ -1127,13 +1258,50 @@
                   "startLine": 26,
                   "startColumn": 25,
                   "endLine": 26,
-                  "endColumn": 71
+                  "endColumn": 69
                 }
               }
             }
           ],
           "properties": {
             "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6668",
+          "level": "warning",
+          "message": "Logging arguments should be passed to the correct parameter.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 17,
+                  "endLine": 83,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 88,
+                  "endLine": 83,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
           }
         },
         {
@@ -1416,43 +1584,6 @@
           }
         },
         {
-          "ruleId": "S6668",
-          "level": "warning",
-          "message": "Logging arguments should be passed to the correct parameter.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 17,
-                  "endLine": 83,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 88,
-                  "endLine": 83,
-                  "endColumn": 90
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null
-            }
-          }
-        },
-        {
           "ruleId": "S6667",
           "level": "warning",
           "message": "Logging in a catch clause should pass the caught exception as a parameter.",
@@ -1522,111 +1653,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 52,
-                  "startColumn": 34,
-                  "endLine": 52,
-                  "endColumn": 68
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2629",
-          "level": "warning",
-          "message": "Don't use string interpolation in logging message templates.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 34,
-                  "endLine": 83,
-                  "endColumn": 86
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 91,
-                  "endLine": 29,
-                  "endColumn": 95
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 62,
-                  "startColumn": 91,
-                  "endLine": 62,
-                  "endColumn": 95
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogError(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 98,
-                  "startColumn": 34,
-                  "endLine": 98,
-                  "endColumn": 86
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2629",
-          "level": "warning",
-          "message": "Don't use string interpolation in logging message templates.",
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
                 "region": {
                   "startLine": 46,
@@ -1650,9 +1676,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
                 "region": {
-                  "startLine": 83,
+                  "startLine": 98,
                   "startColumn": 34,
-                  "endLine": 83,
+                  "endLine": 98,
                   "endColumn": 86
                 }
               }
@@ -1684,9 +1710,93 @@
           }
         },
         {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogError(ILogger, string?, params object?[])'",
+          "ruleId": "S6608",
+          "level": "warning",
+          "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 87,
+                  "endLine": 154,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2629",
+          "level": "warning",
+          "message": "Don't use string interpolation in logging message templates.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 34,
+                  "endLine": 83,
+                  "endColumn": 86
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'HashPassword' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
+                "region": {
+                  "startLine": 261,
+                  "startColumn": 24,
+                  "endLine": 261,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6608",
+          "level": "warning",
+          "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 62,
+                  "startColumn": 91,
+                  "endLine": 62,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2629",
+          "level": "warning",
+          "message": "Don't use string interpolation in logging message templates.",
           "locations": [
             {
               "resultFile": {
@@ -1696,6 +1806,73 @@
                   "startColumn": 34,
                   "endLine": 52,
                   "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6608",
+          "level": "warning",
+          "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 91,
+                  "endLine": 29,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "ASP0015",
+          "level": "note",
+          "message": "The header 'Authorization' can be accessed using the Authorization property",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 25,
+                  "endLine": 154,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HeaderName": "Authorization",
+              "ResolvedPropertyName": "Authorization"
+            }
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogError(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 34,
+                  "endLine": 83,
+                  "endColumn": 86
                 }
               }
             }
@@ -1742,6 +1919,27 @@
           }
         },
         {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogError(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 34,
+                  "endLine": 52,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "ASP0015",
           "level": "note",
           "message": "The header 'Authorization' can be accessed using the Authorization property",
@@ -1789,27 +1987,6 @@
               "HeaderName": "Authorization",
               "ResolvedPropertyName": "Authorization"
             }
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'HashPassword' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
-                "region": {
-                  "startLine": 261,
-                  "startColumn": 24,
-                  "endLine": 261,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
           }
         },
         {
@@ -1825,157 +2002,6 @@
                   "startColumn": 22,
                   "endLine": 266,
                   "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA2254",
-          "level": "note",
-          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogError(ILogger, string?, params object?[])'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
-                "region": {
-                  "startLine": 46,
-                  "startColumn": 37,
-                  "endLine": 46,
-                  "endColumn": 81
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "ASP0015",
-          "level": "note",
-          "message": "The header 'Authorization' can be accessed using the Authorization property",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 25,
-                  "endLine": 11,
-                  "endColumn": 65
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "HeaderName": "Authorization",
-              "ResolvedPropertyName": "Authorization"
-            }
-          }
-        },
-        {
-          "ruleId": "S6932",
-          "level": "warning",
-          "message": "Use model binding instead of accessing the raw request data",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 62,
-                  "startColumn": 29,
-                  "endLine": 62,
-                  "endColumn": 44
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1481",
-          "level": "warning",
-          "message": "Remove the unused local variable 'validatedToken'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
-                "region": {
-                  "startLine": 30,
-                  "startColumn": 111,
-                  "endLine": 30,
-                  "endColumn": 125
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6932",
-          "level": "warning",
-          "message": "Use model binding instead of accessing the raw request data",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 29,
-                  "endLine": 29,
-                  "endColumn": 44
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GetUserProfileFromToken' does not access instance data and can be marked as static",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
-                "region": {
-                  "startLine": 104,
-                  "startColumn": 41,
-                  "endLine": 104,
-                  "endColumn": 64
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6608",
-          "level": "warning",
-          "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
-                "region": {
-                  "startLine": 154,
-                  "startColumn": 87,
-                  "endLine": 154,
-                  "endColumn": 91
                 }
               }
             }
@@ -2048,27 +2074,6 @@
           }
         },
         {
-          "ruleId": "S5122",
-          "level": "warning",
-          "message": "Make sure this permissive CORS policy is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Program.cs",
-                "region": {
-                  "startLine": 37,
-                  "startColumn": 9,
-                  "endLine": 37,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CA2016",
           "level": "note",
           "message": "Forward the 'stoppingToken' parameter to the 'FindAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token",
@@ -2095,18 +2100,39 @@
           }
         },
         {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogError(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 37,
+                  "endLine": 46,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "ASP0015",
           "level": "note",
           "message": "The header 'Authorization' can be accessed using the Authorization property",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
                 "region": {
-                  "startLine": 154,
+                  "startLine": 11,
                   "startColumn": 25,
-                  "endLine": 154,
-                  "endColumn": 57
+                  "endLine": 11,
+                  "endColumn": 65
                 }
               }
             }
@@ -2207,6 +2233,27 @@
           }
         },
         {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Program.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 9,
+                  "endLine": 47,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S6608",
           "level": "warning",
           "message": "Indexing at Count-1 should be used instead of the \"Enumerable\" extension method \"Last\"",
@@ -2219,6 +2266,69 @@
                   "startColumn": 87,
                   "endLine": 64,
                   "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6932",
+          "level": "warning",
+          "message": "Use model binding instead of accessing the raw request data",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 29,
+                  "endLine": 29,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6932",
+          "level": "warning",
+          "message": "Use model binding instead of accessing the raw request data",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 62,
+                  "startColumn": 29,
+                  "endLine": 62,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GetUserProfileFromToken' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/OrderController.cs",
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 41,
+                  "endLine": 104,
+                  "endColumn": 64
                 }
               }
             }
@@ -2255,15 +2365,57 @@
         {
           "ruleId": "S6966",
           "level": "warning",
+          "message": "Await EnsureCreatedAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Program.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 5,
+                  "endLine": 106,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'validatedToken'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Middleware/JwtMiddleware.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 111,
+                  "endLine": 30,
+                  "endColumn": 125
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6966",
+          "level": "warning",
           "message": "Await RunAsync instead.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Program.cs",
                 "region": {
-                  "startLine": 111,
+                  "startLine": 130,
                   "startColumn": 1,
-                  "endLine": 111,
+                  "endLine": 130,
                   "endColumn": 10
                 }
               }
@@ -2318,16 +2470,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'HashPassword' does not access instance data and can be marked as static",
+          "message": "Member 'GetUserProfileFromToken' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
                 "region": {
-                  "startLine": 261,
-                  "startColumn": 24,
-                  "endLine": 261,
-                  "endColumn": 36
+                  "startLine": 195,
+                  "startColumn": 41,
+                  "endLine": 195,
+                  "endColumn": 64
                 }
               }
             }
@@ -2339,16 +2491,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'GetUserProfileFromToken' does not access instance data and can be marked as static",
+          "message": "Member 'HashPassword' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/harun/soft-1/test-soft/backend-man2/MadkassenRestAPI/Controllers/UsersController.cs",
                 "region": {
-                  "startLine": 195,
-                  "startColumn": 41,
-                  "endLine": 195,
-                  "endColumn": 64
+                  "startLine": 261,
+                  "startColumn": 24,
+                  "endLine": 261,
+                  "endColumn": 36
                 }
               }
             }
@@ -2566,6 +2718,23 @@
             "tags": [
               "C#",
               "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
               "SonarWay"
             ]
           }
@@ -2881,6 +3050,22 @@
               "C#",
               "MainSourceScope",
               "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6968": {
+          "id": "S6968",
+          "shortDescription": "Actions that return a value should be annotated with ProducesResponseTypeAttribute containing the return type",
+          "fullDescription": "In an ASP.NET Core Web API, controller actions can optionally return a result value. If a controller action returns a value in the happy path, for example ControllerBase.Ok(Object), annotating the action with one of the [ProducesResponseType] overloads that describe the type is recommended.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6968",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
               "SonarWay"
             ]
           }

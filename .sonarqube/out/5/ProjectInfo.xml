@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>UnitTestOrder</ProjectName>
+  <ProjectName>MadkassenTest</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Test</ProjectType>
-  <ProjectGuid>c0297bdb-54fc-47ea-b6dc-456aa7c37fee</ProjectGuid>
-  <FullPath>C:\Users\harun\soft-1\test-soft\backend-man2\UnitTestOrder\UnitTestOrder.csproj</FullPath>
+  <ProjectGuid>46e887d3-617e-4fcf-96a3-e35c58a081ca</ProjectGuid>
+  <FullPath>C:\Users\harun\soft-1\test-soft\backend-man2\MadkassenTest\MadkassenTest.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResultFiles>
     <AnalysisResultFile Id="FilesToAnalyze" Location="C:\Users\harun\soft-1\test-soft\backend-man2\.sonarqube\conf\5\FilesToAnalyze.txt" />
