@@ -117,7 +117,7 @@ namespace MadkassenTest.Whitebox
             await Assert.ThrowsAsync<ArgumentNullException>(
        () => service.AddProductAsync(product));
         }
-
+//test
         [Fact]
         public async void UpdateProductStockAsync()
         {
